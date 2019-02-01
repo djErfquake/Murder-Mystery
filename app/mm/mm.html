@@ -10,24 +10,35 @@
   </head>
   <body>
 
-    <div class="code-form middle-screen-container">
+    <!-- <div class="code-form middle-screen-container">
       <input class="code-entry middle-screen stack" placeholder="Enter CODE Here..." />
       <button class="code-button middle-screen stack icon-paper-plane">GO</button>
-    </div>
+    </div> -->
 
 
 
 
-    <section class="how-it-works-section hidden">
+    <!-- <section class="how-it-works-section hidden"> -->
+    <section class="how-it-works-section">
       <div class="navigation-icons">
         <p id="character-icon"><i class="far fa-address-card"></i></p>
       </div>
       <h2 class="name">How does this Work?</h2>
-      <div class="desc"><p>First of all, no gifts please. The best gift you can give is to come and have fun with the game Calvin has prepared.  On February 23rd, you arrive at Calvin and Carolyn's house.  Hopefully, you'll have dressed the part by rumaging thorough your closet or going to the thrift store.  When you come in, Calvin will give you a nametag so that everybody else will know who you are.  This could be helpful in the case that they have information about your character.</p>
-      <p></p></div>
-      <div class="game-flow">
-        The night will mostly run like a normal party.  For the first hour or so, talk and hang out with the other guests.  Grab some food.  Drink some drinks.  At some point, once everyone is there, an announcement will be made that will shake everything up.  From then on, it is up to you achieve your goals by talking and negotiating with people.  The trick is that everyone is will be doing the same.  Are the people you trust lying to you?  Are you lying to them?  There's only one way to find out!
-      </div>
+      <p class="desc">
+        First of all, no gifts please. The best gift you can give is to come and have fun with the game Calvin has prepared.  On February 23rd, you arrive at Calvin and Carolyn's house.  Hopefully, you'll have dressed the part by rumaging thorough your closet or going to the thrift store.  When you come in, Calvin will give you a nametag so that everybody else will know who you are.  This could be helpful in the case that they have information about your character.  Throughout the night, Calvin can answer any questions you might have about how the game works, or clarifying things your character should know.  He may also pull you aside and tell you pivotal information that only you know.  Calvin isn't working with or against anybody, but just trying to help everyone have the most possible fun.
+      </p>
+      <p class="game-flow">
+        The night will mostly run like a normal party.  However, When the party begins, don't start right away.  Calvin will let you know when the time is right.  For the first hour or so, talk and hang out with the other guests.  Grab some food.  Drink some drinks.  At some point, once everyone is there, an announcement will be made that will shake everything up and the game will begin.  From then on, it is up to you achieve your goals by talking and negotiating with people.  The trick is that everyone is will be doing the same.  Are the people you trust lying to you?  Are you lying to them?  There's only one way to find out!
+      </p>
+      <p class="preparing-tips">
+        The reason I'm sending you this large amount of information is so that we can begin playing as soon as possible.  The information below is all about your character; who they are, what they know, and importantly, what they want.  Try to read this all carefully before the party so that you'll be ready to participate right away.  Murder Mystery games work best when the players know the character's they'll be playing well, so here are some tips for being prepared:
+        <ul>
+          <li>Read all of the information about your character below.  I've actually condensed this down a lot into only the things you need to know.</li>
+          <li>Read your goals.</li>
+          <li>Read about your character again, this time thinking about your goals.</li>
+        </ul>
+      </p>
+      <p>...and now, it is time to learn your role!</p>
     </section>
 
 
@@ -39,23 +50,41 @@
         </div>
         <h4>You are</h4><br>
         <h1 class="name">{{name}},</h1>
-        <div class="desc">{{desc}}<p>This mystery takes place in the recently discovered tomb of BLAH BLAH BLAH.</p><p>{{scenarioInfo}}</p></div>
-        <div class="relationships zigzag">
-          <h3>Relationships</h3>
-          You might know certain people better than others. It is up to you to find those people. They may be willing to help.
-          <ul>
-            {{#relations}}
-            <li>{{{.}}}</li>
-            {{/relations}}
-          </ul>
+        <div class="desc">{{desc}}
+          <p>The Valley of the Kings, Luxor, Egypt. 23rd of April 1894.  You have been invited to a party by an archaelogical team from Oxford University, led by Sir William Saville to celebrate their startling discovery.</p>
+          <p>The team and their guests prepart to enjoy themselves and celebrate the uncovering of the tomb of a previously unknown XVIth Dynasty Pharoh.  But while the archaelogists make merry, dark clouds gather, internal tensions among the group burst to the surface and one of the local diggers is brutally murdered... Welcome to the <b>Curse of the Pharaoh</b></p>
         </div>
+        <div class="what-you-know zigzag">
+          <h3>What you Know</h3>
+          {{scenarioInfo}}
+        </div>
+      </section>
+
+
+      <section class="relationships-section zigzag">
+        <h3>Relationships</h3>
+        You might know certain people better than others. It is up to you to find those people. They may be willing to help.
+        <table class="relationships-table primary">
+          <thead class="relationships-table-head">
+            <th class="relationships-name">Name</th>
+            <th class="relationships-relationship">Relationship</th>
+          </thead>
+          <tbody>
+            {{#relations}}
+            <tr>
+              <td class="relationship-name">{{{name}}}</td>
+              <td>{{{desc}}}</td>
+            </tr>
+            {{/relations}}
+          </tbody>
+        </table>
       </section>
 
 
 
       <section class="items-section zigzag">
         <h3>Personal Items</h3>
-        Calvin will hand these to you when you arrive at the party. They could be printed pieces of paper or props of some kind.
+        Some players will have items, which could include money.  Calvin will hand these to you when you arrive at the party. They could be printed pieces of paper or props of some kind.  Some items may even have abilities.  If you have questions about how the abilites work, ask Calvin.
         <ul>
           {{#items}}
           <li>{{{.}}}</li>

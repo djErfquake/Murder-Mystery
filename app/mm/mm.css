@@ -107,12 +107,23 @@ section {
   margin-top: -80px;
 }
 
-.relationships {
+.what-you-know {
   border-radius: 5px;
   background-color: #cdcdcd;
   color: #2d2d2d;
   margin-top: 20px;
   padding: 20px;
+}
+
+/* RELATIONSHIPS SECTION */
+.relationships-section {
+  background-color: #FE265B;
+  color: white;
+}
+
+th {
+  background-color: #4c53a8;
+  color: white;
 }
 
 /* ITEMS SECTION */
@@ -156,11 +167,6 @@ section {
 .abilities-table {
   width: 100%;
   margin-top: 20px;
-}
-
-th {
-  background-color: #FC6109;
-  color: white;
 }
 
 .abilities-ability {

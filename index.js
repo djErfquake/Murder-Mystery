@@ -43,10 +43,10 @@ let abilities = {
 let blaiseSadler = {
   name: "Blaise Sadler",
   gender: "F",
-  desc: "an aging saloon madame who is known to be selfish and unscrupulous",
+  desc: "an aging saloon madame who is known to be selfish and unscrupulous.",
   scenarioInfo: "",
   relations: [
-    "You are Kalamata Kate's Boss"
+    {name: "Kalamata Kate", desc: "You are her boss." }
   ],
   items: [
     "Half of a map to Zeke Calhoun's mine, including Dead Man's Bluff",
