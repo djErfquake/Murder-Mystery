@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--https://picnicss.com/-->
+    <link rel="stylesheet" href="https://unpkg.com/picnic">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="mm.css"/>
+
+    <title>Murder Mystery Character Info</title>
+  </head>
+  <body>
+
+    <div class="code-form middle-screen-container">
+      <input class="code-entry middle-screen stack" placeholder="Enter CODE Here..." />
+      <button class="code-button middle-screen stack icon-paper-plane">GO</button>
+    </div>
+
+
+
+
+    <section class="how-it-works-section hidden">
+      <div class="navigation-icons">
+        <p id="character-icon"><i class="far fa-address-card"></i></p>
+      </div>
+      <h2 class="name">How does this Work?</h2>
+      <div class="desc"><p>First of all, no gifts please. The best gift you can give is to come and have fun with the game Calvin has prepared.  On February 23rd, you arrive at Calvin and Carolyn's house.  Hopefully, you'll have dressed the part by rumaging thorough your closet or going to the thrift store.  When you come in, Calvin will give you a nametag so that everybody else will know who you are.  This could be helpful in the case that they have information about your character.</p>
+      <p></p></div>
+      <div class="game-flow">
+        The night will mostly run like a normal party.  For the first hour or so, talk and hang out with the other guests.  Grab some food.  Drink some drinks.  At some point, once everyone is there, an announcement will be made that will shake everything up.  From then on, it is up to you achieve your goals by talking and negotiating with people.  The trick is that everyone is will be doing the same.  Are the people you trust lying to you?  Are you lying to them?  There's only one way to find out!
+      </div>
+    </section>
+
+
+
+    <script id="handlebars-character" type="text/x-handlebars-template">
+      <section class="name-section">
+        <div class="navigation-icons">
+          <p id="question-icon"><i class="far fa-question-circle"></i></p>
+        </div>
+        <h4>You are</h4><br>
+        <h1 class="name">{{name}},</h1>
+        <div class="desc">{{desc}}<p>This mystery takes place in the recently discovered tomb of BLAH BLAH BLAH.</p><p>{{scenarioInfo}}</p></div>
+        <div class="relationships zigzag">
+          <h3>Relationships</h3>
+          You might know certain people better than others. It is up to you to find those people. They may be willing to help.
+          <ul>
+            {{#relations}}
+            <li>{{{.}}}</li>
+            {{/relations}}
+          </ul>
+        </div>
+      </section>
+
+
+
+      <section class="items-section zigzag">
+        <h3>Personal Items</h3>
+        Calvin will hand these to you when you arrive at the party. They could be printed pieces of paper or props of some kind.
+        <ul>
+          {{#items}}
+          <li>{{{.}}}</li>
+          {{/items}}
+        </ul>
+      </section>
+
+
+      <section class="clue-section zigzag">
+        <h3>Clue</h3>
+        Everyone has a clue that they can wield to gain new information. Since it is only a clue, and not evidence, you probably don't have the full picture, but you'll have something to start with.
+        <ul>
+          <li>{{{clue}}}</li>
+        </ul>
+        </div>
+      </section>
+
+
+      <section class="secrets-section zigzag">
+        <h3>Secrets</h3>
+        Everyone also has some secrets that only they know. Only give this information out if you are getting something equally valuable in return.
+        <ul>
+          {{#secrets}}
+          <li>{{{.}}}</li>
+          {{/secrets}}
+        </ul>
+      </section>
+
+
+      <section class="goals-section zigzag">
+        <h3>Goals</h3>
+        You have goals that in order to "Win" you must complete. These can be completed in a variety of ways, but usually through talking to other people and making deals.
+        <ul>
+          {{#goals}}
+          <li>{{{.}}}</li>
+          {{/goals}}
+        </ul>
+      </section>
+
+
+      <section class="abilities-section">
+        <h3>Abilities</h3>
+        You have some special abilities that you may perform when applicable. They could be helpful in gaining trust or information from other players.
+        <table class="abilities-table primary">
+          <thead class="abilities-table-head">
+            <th class="abilities-name">Name</th>
+            <th class="abilities-ability">Ability</th>
+          </thead>
+          <tbody>
+            {{#abilities}}
+            <tr>
+              <td class="ability-name">{{{name}}}</td>
+              <td>{{{desc}}}</td>
+            </tr>
+            {{/abilities}}
+          </tbody>
+        </table>
+        <table class="primary">
+      </section>
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- load scripts -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+    <script type="text/javascript" src="mm.js"></script>
+
+
+  </body>
+</html>
