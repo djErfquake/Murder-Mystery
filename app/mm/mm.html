@@ -10,16 +10,16 @@
   </head>
   <body>
 
-    <!-- <div class="code-form middle-screen-container">
+    <div class="code-form middle-screen-container">
       <input class="code-entry middle-screen stack" placeholder="Enter CODE Here..." />
       <button class="code-button middle-screen stack icon-paper-plane">GO</button>
-    </div> -->
+    </div>
 
 
 
 
-    <!-- <section class="how-it-works-section hidden"> -->
-    <section class="how-it-works-section">
+    <section class="how-it-works-section hidden">
+    <!-- <section class="how-it-works-section"> -->
       <div class="navigation-icons">
         <p id="character-icon"><i class="far fa-address-card"></i></p>
       </div>
@@ -28,7 +28,7 @@
         First of all, no gifts please. The best gift you can give is to come and have fun with the game Calvin has prepared.  On February 23rd, you arrive at Calvin and Carolyn's house.  Hopefully, you'll have dressed the part by rumaging thorough your closet or going to the thrift store.  When you come in, Calvin will give you a nametag so that everybody else will know who you are.  This could be helpful in the case that they have information about your character.  Throughout the night, Calvin can answer any questions you might have about how the game works, or clarifying things your character should know.  He may also pull you aside and tell you pivotal information that only you know.  Calvin isn't working with or against anybody, but just trying to help everyone have the most possible fun.
       </p>
       <p class="game-flow">
-        The night will mostly run like a normal party.  However, When the party begins, don't start right away.  Calvin will let you know when the time is right.  For the first hour or so, talk and hang out with the other guests.  Grab some food.  Drink some drinks.  At some point, once everyone is there, an announcement will be made that will shake everything up and the game will begin.  From then on, it is up to you achieve your goals by talking and negotiating with people.  The trick is that everyone is will be doing the same.  Are the people you trust lying to you?  Are you lying to them?  There's only one way to find out!
+        The night will mostly run like a normal party.  However, When the party begins, don't start right away.  Calvin will let you know when the time is right.  For the first hour or so, talk and hang out with the other guests.  Grab some food.  Drink some drinks.  At some point, once everyone is there, an announcement will be made that will shake everything up and the game will begin.  From then on, talk to everyone, find out who your friends are and who your enemies are.  If you help someone with their goals, they may help you with yours.  It is up to you achieve your goals by talking and negotiating with people.  The trick is that everyone is will be doing the same.  Are the people you trust lying to you?  Are you lying to them?  There's only one way to find out!
       </p>
       <p class="preparing-tips">
         The reason I'm sending you this large amount of information is so that we can begin playing as soon as possible.  The information below is all about your character; who they are, what they know, and importantly, what they want.  Try to read this all carefully before the party so that you'll be ready to participate right away.  Murder Mystery games work best when the players know the character's they'll be playing well, so here are some tips for being prepared:
@@ -51,19 +51,20 @@
         <h4>You are</h4><br>
         <h1 class="name">{{name}},</h1>
         <div class="desc">{{desc}}
-          <p>The Valley of the Kings, Luxor, Egypt. 23rd of April 1894.  You have been invited to a party by an archaelogical team from Oxford University, led by Sir William Saville to celebrate their startling discovery.</p>
-          <p>The team and their guests prepart to enjoy themselves and celebrate the uncovering of the tomb of a previously unknown XVIth Dynasty Pharoh.  But while the archaelogists make merry, dark clouds gather, internal tensions among the group burst to the surface and one of the local diggers is brutally murdered... Welcome to the <b>Curse of the Pharaoh</b></p>
+          <p>The Valley of the Kings, Luxor, Egypt. 23rd of April 1894.  You have been invited to a party by an archaeological team from Oxford University, led by Sir William Saville to celebrate their startling discovery.</p>
+          <p>The team and their guests prepart to enjoy themselves and celebrate the uncovering of the tomb of a previously unknown XVIth Dynasty Pharaoh.  But while the archaeologists make merry, dark clouds gather, internal tensions among the group burst to the surface and one of the local diggers is brutally murdered... Welcome to the <b>Curse of the Pharaoh</b></p>
         </div>
         <div class="what-you-know zigzag">
-          <h3>What you Know</h3>
-          {{scenarioInfo}}
+          <h3>Who You Are</h3>
+          {{{scenarioInfo}}}
+          <p>On top of all of that, Egyptian politics are on a knife-edge, thanks mainly to the British high-handed attitudes.  If the local villagers are provoked, the whole province could go up in arms and a rival power would be well placed to grab what it could.</p>
         </div>
       </section>
 
 
       <section class="relationships-section zigzag">
         <h3>Relationships</h3>
-        You might know certain people better than others. It is up to you to find those people. They may be willing to help.
+        Different people see you different ways.  Most people see you as {{{seenAs}}}.  You might also know certain people better than others. It is up to you to find those people. They may be willing to help, or they may be working asgainst you.  Here are the people you know before the party begins:
         <table class="relationships-table primary">
           <thead class="relationships-table-head">
             <th class="relationships-name">Name</th>
@@ -72,8 +73,8 @@
           <tbody>
             {{#relations}}
             <tr>
-              <td class="relationship-name">{{{name}}}</td>
-              <td>{{{desc}}}</td>
+              <td class="table-bold">{{{name}}}</td>
+              <td class="table-desc">{{{desc}}}</td>
             </tr>
             {{/relations}}
           </tbody>
@@ -117,17 +118,26 @@
       <section class="goals-section zigzag">
         <h3>Goals</h3>
         You have goals that in order to "Win" you must complete. These can be completed in a variety of ways, but usually through talking to other people and making deals.
-        <ul>
-          {{#goals}}
-          <li>{{{.}}}</li>
-          {{/goals}}
-        </ul>
+        <table class="goals-table primary">
+          <thead class="goals-table-head">
+            <th class="goals-name">Goal</th>
+            <th class="goals-desc">Description</th>
+          </thead>
+          <tbody>
+            {{#goals}}
+            <tr>
+              <td class="table-bold">{{{name}}}</td>
+              <td class="table-desc">{{{desc}}}</td>
+            </tr>
+            {{/goals}}
+          </tbody>
+        </table>
       </section>
 
 
       <section class="abilities-section">
         <h3>Abilities</h3>
-        You have some special abilities that you may perform when applicable. They could be helpful in gaining trust or information from other players.
+        You have some special abilities that you may perform when applicable. They could be helpful in gaining trust or information from other players.  When you arrive at the party, Calvin will give you an envolope with stuff in it.  Each ability will have a card.
         <table class="abilities-table primary">
           <thead class="abilities-table-head">
             <th class="abilities-name">Name</th>
@@ -136,8 +146,8 @@
           <tbody>
             {{#abilities}}
             <tr>
-              <td class="ability-name">{{{name}}}</td>
-              <td>{{{desc}}}</td>
+              <td class="table-bold">{{{name}}}</td>
+              <td class="table-desc">{{{desc}}}</td>
             </tr>
             {{/abilities}}
           </tbody>
