@@ -1,14 +1,14 @@
 {
-    "name": "Murder Mystery info",
-    "short_name": "Murder Mystery info",
+    "name": "Murder Mystery Info",
+    "short_name": "Murder Mystery Info",
     "icons": [
         {
-            "src": "http://localhost:3000/mm/assets/horus.png/android-chrome-192x192.png",
+            "src": "https://levally-sandbox.herokuapp.com/mm/assets/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "http://localhost:3000/mm/assets/horus.png/android-chrome-512x512.png",
+            "src": "https://levally-sandbox.herokuapp.com/mm/assets/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
