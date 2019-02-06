@@ -29,11 +29,15 @@ body {
 
 @media screen and (orientation:portrait) {
 
+  body {
+    font-size: 1.5em;
+  }
+
   .middle-screen {
     width: 75vw;
     height: 4.5em;
 
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
 }
@@ -128,6 +132,25 @@ th {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpolygon fill='%23000' fill-opacity='.1' points='120 0 120 60 90 30 60 0 0 0 0 0 60 60 0 120 60 120 90 90 120 60 120 0'/%3E%3C/svg%3E");
 }
 
+
+
+/* SCENARIO INFO */
+.scenario-info-section {
+  background-color: #FC6109;
+  color: white;
+}
+
+.scenario-title {
+  padding-top: 0px;
+}
+
+.title-span {
+  font-size: 2em;
+}
+
+
+
+
 /* NAME SECTION */
 .name-section {
   background-color: white;
@@ -150,6 +173,35 @@ th {
   padding: 20px;
 }
 
+
+
+/* MOTIVES SECTION */
+.motives-section {
+
+  background-color: #4c53a8;
+  color: white;
+
+}
+
+
+/* GOALS SECTION */
+.goals-section {
+  background-color: #FC6109;
+  color: white;
+}
+
+
+
+
+
+/* SECRETS SECTION */
+
+.clues-and-secrets-section {
+  background-color: #F9B50B;
+  color: #2d2d2d;
+}
+
+
 /* RELATIONSHIPS SECTION */
 .relationships-section {
   background-color: #FE265B;
@@ -157,37 +209,6 @@ th {
 }
 
 
-
-/* ITEMS SECTION */
-.items-section {
-
-  background-color: #4c53a8;
-  color: white;
-}
-
-
-/* CLUE SECTION */
-
-.clue-section {
-  background-color: #FC6109;
-  color: white;
-}
-
-
-/* SECRETS SECTION */
-
-.secrets-section {
-  background-color: #F9B50B;
-  color: #2d2d2d;
-}
-
-
-
-/* GOALS SECTION */
-.goals-section {
-  background-color: #FE265B;
-  color: white;
-}
 
 
 /* ABILITIES SECTION */

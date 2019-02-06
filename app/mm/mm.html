@@ -21,62 +21,124 @@
   </head>
   <body>
 
-    <div class="code-form middle-screen-container">
+    <!-- <div class="code-form middle-screen-container">
       <input class="code-entry middle-screen stack" placeholder="Enter your CODE here" />
       <button class="code-button middle-screen stack icon-paper-plane">GO</button>
-    </div>
+    </div> -->
 
 
 
 
-    <section class="how-it-works-section hidden">
-    <!-- <section class="how-it-works-section"> -->
+    <!-- <section class="how-it-works-section hidden"> -->
+    <section class="how-it-works-section">
       <div class="navigation-icons">
         <p id="character-icon"><i class="far fa-address-card"></i></p>
       </div>
-      <h2 class="name">How does this Work?</h2>
+      <h2 class="name">How does a Murder Mystery Work?</h2>
       <p class="desc">
-        First of all, no gifts please. The best gift you can give is to come and have fun with the game Calvin has prepared.  On February 23rd, you arrive at Calvin and Carolyn's house.  Hopefully, you'll have dressed the part by rumaging thorough your closet or going to the thrift store.  When you come in, Calvin will give you a nametag so that everybody else will know who you are.  This could be helpful in the case that they have information about your character.  Throughout the night, Calvin can answer any questions you might have about how the game works, or clarifying things your character should know.  He may also pull you aside and tell you pivotal information that only you know.  Calvin isn't working with or against anybody, but just trying to help everyone have the most possible fun.
+        In order to have the most fun murder mystery experience, it's important to:
+        <ol>
+          <li>Read about the murder, your character, and how you personally win the game carefully (below)</li>
+          <li>Get into character – themed dress and props are encouraged</li>
+          <li>Come to the party!</li>
+          <li>Once at the party, wait until all the guests arrive and Calvin begins the game to start investigating the murder.  Eat, drink, and by merry until the game starts!</li>
+          <li>After the game starts, talk to people – find your friends, enemies, and allies to try and achieve your goals.  Be careful who you trust!  Use Calvin if you have any questions, as he's the game's moderator and not a character.</li>
+        </ol>
       </p>
-      <p class="game-flow">
-        The night will mostly run like a normal party.  However, When the party begins, don't start right away.  Calvin will let you know when the time is right.  For the first hour or so, talk and hang out with the other guests.  Grab some food.  Drink some drinks.  At some point, once everyone is there, an announcement will be made that will shake everything up and the game will begin.  From then on, talk to everyone, find out who your friends are and who your enemies are.  If you help someone with their goals, they may help you with yours.  It is up to you achieve your goals by talking and negotiating with people.  The trick is that everyone is will be doing the same.  Are the people you trust lying to you?  Are you lying to them?  There's only one way to find out!
-      </p>
-      <p class="preparing-tips">
-        The reason I'm sending you this large amount of information is so that we can begin playing as soon as possible.  The information below is all about your character; who they are, what they know, and importantly, what they want.  Try to read this all carefully before the party so that you'll be ready to participate right away.  Murder Mystery games work best when the players know the character's they'll be playing well, so here are some tips for being prepared:
-        <ul>
-          <li>Read all of the information about your character below.  I've actually condensed this down a lot into only the things you need to know.</li>
-          <li>Read your goals.</li>
-          <li>Read about your character again, this time thinking about your goals.</li>
-        </ul>
-      </p>
-      <p>...and now, it is time to learn your role!</p>
+      <p>Good luck, have fun, and be on the lookout!</p>
     </section>
 
 
 
     <script id="handlebars-character" type="text/x-handlebars-template">
+
+
+      <section class="scenario-info-section zigzag">
+        <h2 class="scenario-title">The Curse of the Pharoh</h2>
+        <div class="scenario-info">
+          <p>
+            You're in the Valley of the Kings, Luxor, Egypt.  It's April 23rd, 1894.  You have been invited to a party by an archaeological team from Oxford University, led by <b>Sir William Saville</b> to celebrate their startling discovery – the uncovering of the tomb of a previously unknown XVIth Dynasty Pharaoh.
+          </p>
+          <p>
+            The team and their guests prepare to enjoy themselves and celebrate the discovery, but while the everyone has fun, dark clouds gather, internal tensions among the group burst to the surface and one of the local diggers, Abu Nazier is <b>brutally murdered</b>...
+          </p>
+          <p class="title-span">
+            Welcome to the <b>Curse of the Pharaoh</b>.
+          </p>
+        </div>
+      </section>
+
+
+
       <section class="name-section">
         <div class="navigation-icons">
           <p id="question-icon"><i class="far fa-question-circle"></i></p>
         </div>
         <h4>You are</h4><br>
         <h1 class="name">{{name}},</h1>
-        <div class="desc">{{desc}}
-          <p>The Valley of the Kings, Luxor, Egypt. 23rd of April 1894.  You have been invited to a party by an archaeological team from Oxford University, led by Sir William Saville to celebrate their startling discovery.</p>
-          <p>The team and their guests prepart to enjoy themselves and celebrate the uncovering of the tomb of a previously unknown XVIth Dynasty Pharaoh.  But while the archaeologists make merry, dark clouds gather, internal tensions among the group burst to the surface and one of the local diggers, Abu Nazier, is brutally murdered... Welcome to the <b>Curse of the Pharaoh</b>.</p>
-        </div>
+        <div class="desc">{{desc}}</div>
         <div class="what-you-know zigzag">
-          <h3>Who You Are</h3>
-          {{{scenarioInfo}}}
-          <p>On top of all of that, Egyptian politics are on a knife-edge, thanks mainly to the British high-handed attitudes.  If the local villagers are provoked, the whole province could go up in arms and a rival power would be well placed to grab what it could.</p>
-          <p>Abu Nazier's body has been moved to the camel shed.  He was found with a knife in his stomach and was wearing a strange red sash.  Ask Calvin for more details if you'd like to investigate the body further.</p>
+          <h3>Your Background</h3>
+          {{{background}}}
         </div>
       </section>
 
 
+      <section class="motives-section zigzag">
+        <h3>Your Motives for the Evening</h3>
+        {{{motives}}}
+      </section>
+
+
+
+
+
+      <section class="goals-section zigzag">
+        <h3>How You Win</h3>
+        You have goals that in order to "win" you must complete.  These can be completed in a variety of ways, but usually through talking to other people and making deals.
+        <table class="goals-table primary">
+          <thead class="goals-table-head">
+            <th class="goals-name">Goal</th>
+            <th class="goals-desc">Description</th>
+          </thead>
+          <tbody>
+            {{#goals}}
+            <tr>
+              <td class="table-bold">{{{name}}}</td>
+              <td class="table-desc">{{{desc}}}</td>
+            </tr>
+            {{/goals}}
+          </tbody>
+        </table>
+      </section>
+
+
+
+
+
+      <section class="clues-and-secrets-section zigzag">
+        <h3>Clues & Secrets</h3>
+        <p>
+          Everyone has a clue that they can wield to gain new information.
+          <ul>
+            <li><b>{{{clue}}}</b></li>
+          </ul>
+        </p>
+        <p>
+          Everyone also has some secrets that only they know. Only give this information out if you are getting something equally valuable in return.
+          <ul>
+            {{#secrets}}
+            <li><b>{{{.}}}</b></li>
+            {{/secrets}}
+          </ul>
+        </p>
+      </section>
+
+
+
       <section class="relationships-section zigzag">
-        <h3>Relationships</h3>
-        Different people see you different ways.  Most people see you as {{{seenAs}}}.  You might also know certain people better than others. It is up to you to find those people. They may be willing to help, or they may be working asgainst you.  Here are the people you know before the party begins:
+        <h3>Your Relationships</h3>
+        Different people see you in different ways.  Most people see you as {{{seenAs}}}.  You might also know certain people better than others. It is up to you to find those people. They may be willing to help, or they may be working against you.  Here are the people you know before the party begins:
         <table class="relationships-table primary">
           <thead class="relationships-table-head">
             <th class="relationships-name">Name</th>
@@ -95,77 +157,6 @@
 
 
 
-      <section class="items-section zigzag">
-        <h3>Personal Items</h3>
-        Some players will have items, which could include money.  Calvin will hand these to you when you arrive at the party. They could be printed pieces of paper or props of some kind.  Some items may even have abilities.  If you have questions about how the abilites work, ask Calvin.
-        <ul>
-          {{#items}}
-          <li>{{{.}}}</li>
-          {{/items}}
-        </ul>
-      </section>
-
-
-      <section class="clue-section zigzag">
-        <h3>Clue</h3>
-        Everyone has a clue that they can wield to gain new information. Since it is only a clue, and not evidence, you probably don't have the full picture, but you'll have something to start with.
-        <ul>
-          <li>{{{clue}}}</li>
-        </ul>
-        </div>
-      </section>
-
-
-      <section class="secrets-section zigzag">
-        <h3>Secrets</h3>
-        Everyone also has some secrets that only they know. Only give this information out if you are getting something equally valuable in return.
-        <ul>
-          {{#secrets}}
-          <li>{{{.}}}</li>
-          {{/secrets}}
-        </ul>
-      </section>
-
-
-      <section class="goals-section zigzag">
-        <h3>Goals</h3>
-        You have goals that in order to "Win" you must complete. These can be completed in a variety of ways, but usually through talking to other people and making deals.
-        <table class="goals-table primary">
-          <thead class="goals-table-head">
-            <th class="goals-name">Goal</th>
-            <th class="goals-desc">Description</th>
-          </thead>
-          <tbody>
-            {{#goals}}
-            <tr>
-              <td class="table-bold">{{{name}}}</td>
-              <td class="table-desc">{{{desc}}}</td>
-            </tr>
-            {{/goals}}
-          </tbody>
-        </table>
-      </section>
-
-
-      <section class="abilities-section">
-        <h3>Abilities</h3>
-        You have some special abilities that you may perform when applicable. They could be helpful in gaining trust or information from other players.  When you arrive at the party, Calvin will give you an envolope with stuff in it.  Each ability will have a card.  When an ability card is used, tear it up and remove it from the game.
-        <table class="abilities-table primary">
-          <thead class="abilities-table-head">
-            <th class="abilities-name">Name</th>
-            <th class="abilities-ability">Ability</th>
-          </thead>
-          <tbody>
-            {{#abilities}}
-            <tr>
-              <td class="table-bold">{{{name}}}</td>
-              <td class="table-desc">{{{desc}}}</td>
-            </tr>
-            {{/abilities}}
-          </tbody>
-        </table>
-        <table class="primary">
-      </section>
     </script>
 
 
