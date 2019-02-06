@@ -80,7 +80,7 @@ let alvySpanheim = {
   goals: [
     {name: "The Crimson Pharaoh", desc: "Do what you can to aid his cause and hasten his return.  If you think this is his tomb and you find one of his sacred artifacts you could actually summon him tonight!"},
     {name: "Germany", desc: "Second only to your loyalty to the Crimson Sash is your love of your nation. You should seek any advantage for Germany."},
-    {name: "Artifact Smuggling", desc: "Although you need to keep your identity as ‘Mr Big’ secret, you are always keen to pick up artefacts – one of the young archaeologists here might perhaps be a good source.  Young people always need money!"},
+    {name: "Artifact Smuggling", desc: "Although you need to keep your identity as ‘Mr Big’ secret, you are always keen to pick up artifacts – one of the young archaeologists here might perhaps be a good source.  Young people always need money!"},
     {name: "Sir William", desc: "You do not want him to know you are ‘Mr Big’, but you are keen to find out if he can pay his debt.  If not, it may be time for his glorious career to come to an end…"}
   ],
   secrets: [
@@ -145,7 +145,7 @@ let lindsayWild = {
     {name: "Hugh Carlow", person: "", desc: "A fellow archaeologist in your group and a shallow stuck-up idiot." },
     {name: "Helen Mackinnon", person: "", desc: "A fellow archaeologist in your group and an example of everything that’s worst about Oxford – arrogant, dim and spoilt." },
     {name: "Ariadne Price-Evans", person: "", desc: "The only one of the archaeological team who is ever even slightly nice to you, you rather despise her for it (in a twisted sort of way).  But nonetheless you do feel somewhat drawn to her." },
-    {name: "Shahfeez Merouf", person: "", desc: "Shahfeez is supposed to be a great enemy of artefact smugglers, so it’s important to keep your activities secret." }
+    {name: "Shahfeez Merouf", person: "", desc: "Shahfeez is supposed to be a great enemy of artifact smugglers, so it’s important to keep your activities secret." }
   ],
   items: [
     "The Eye of Horus",
@@ -178,20 +178,19 @@ let williamSaville = {
   gender: "M",
   desc: "renowned archaeologist and leader of the dig.",
   seenAs: "very British, dynamic, and brilliant",
-  scenarioInfo: "<p>The opening of this tomb and the finding of the Jade Scarab should set the seal on your long and distinguished archaeological career, which has seen you rise to the very peak of your profession.  The Jade Scarab is a magnificent specimen and you've never seen a carved scarab like this with a diamond on it's back.  How very serendipitous that you had organised dinner for this evening – just when you have a truly remarkable find, the Jade Scarab, to celebrate.</p><p>As well as the other expedition members, you’ve invited three guests.  <b>Shahfeez Merouf</b>, as curator of the Luxor Museum, just had to be invited.  You need <b>Shahfeez</b> to renew your dig licence.  <b>Alvy Spanheim</b> is the German Embassador and you’ve heard that he has an interest in archaeology.  As for <b>Eva de Chalons</b>, that was a shot in the dark.  You’ve only heard of her reputation as a glamorous socialite, so it was a pleasant surprise when she accepted.  It should have been a good night, except that one of the diggers has been killed.  Still, you’re not going to let something like that upset your dinner party.</p><p>At least you didn’t have to steal the Jade Scarab – unlike the discovery that made your name, the Eye of Horus.  Harry Flinders really discovered the Eye of Horus: you were both young and daring, but it was he who translated the ancient map, he who identified the correct patch of sand to start digging, and he who should have got the credit for the discovery – had he not unfortunately died of scorpionbite the very same day.</p><p>You mourned publicly, dedicating the find to his memory, and were so convincing that you successfully won the heart (temporarily) of Harry’s fiancée <b>Ariadne Price-Evans</b>.  Ever since, however, your guilty secret has gnawed at you – it was you, consumed with envy and bitterness, who put the fatal scorpion into Harry’s boot.</p><p>Maybe even now it’s not too late to rekindle the flame with <b>Ariadne</b> – Harry’s death is far in the past, and you are still a fine figure of a man.  You are not entirely sure why she broke your liaison off in the first place: she just went away without warning one day, and you didn’t hear of her again for several years, by which time her own archaeological career was under way.</p><p>You have another guilty secret.  In recent years your finds have been tailing off (all the best tombs have already been found) and you have resorted to buying black-market artefacts and pretending that they are your own finds.  Fortunately there is an active artefact-smuggling ring operating around Luxor, run by a mysterious figure known only as ‘Mr Big’, and you have been a good customer to them.</p><p>You have no idea who Mr Big might be, but you have a sneaking suspicion that it may be one of your guests tonight – <b>Merouf</b>, <b>de Chalons</b> or <b>Spanheim</b> – which is partly why you invited them.  You are considerably in debt to the smugglers, and in fear of being exposed if you don’t pay up.  If you can learn Mr Big’s true identity that will give you a blackmail card to play in return.  No danger of you being exposed then!</p>",
+  scenarioInfo: "<p>The opening of this tomb and the finding of the Jade Scarab should set the seal on your long and distinguished archaeological career, which has seen you rise to the very peak of your profession.  The Jade Scarab is a magnificent specimen and you've never seen a carved scarab like this with a diamond on it's back.  How very serendipitous that you had organised dinner for this evening – just when you have a truly remarkable find, the Jade Scarab, to celebrate.</p><p>As well as the other expedition members, you’ve invited three guests.  <b>Shahfeez Merouf</b>, as curator of the Luxor Museum, just had to be invited.  You need <b>Shahfeez</b> to renew your dig licence.  <b>Alvy Spanheim</b> is the German Embassador and you’ve heard that he has an interest in archaeology.  As for <b>Eva de Chalons</b>, that was a shot in the dark.  You’ve only heard of her reputation as a glamorous socialite, so it was a pleasant surprise when she accepted.  It should have been a good night, except that one of the diggers has been killed.  Still, you’re not going to let something like that upset your dinner party.</p><p>At least you didn’t have to steal the Jade Scarab – unlike the discovery that made your name, the Eye of Horus.  Harry Flinders really discovered the Eye of Horus: you were both young and daring, but it was he who translated the ancient map, he who identified the correct patch of sand to start digging, and he who should have got the credit for the discovery – had he not unfortunately died of scorpionbite the very same day.</p><p>You mourned publicly, dedicating the find to his memory, and were so convincing that you successfully won the heart (temporarily) of Harry’s fiancée <b>Ariadne Price-Evans</b>.  Ever since, however, your guilty secret has gnawed at you – it was you, consumed with envy and bitterness, who put the fatal scorpion into Harry’s boot.</p><p>Maybe even now it’s not too late to rekindle the flame with <b>Ariadne</b> – Harry’s death is far in the past, and you are still a fine figure of a man.  You are not entirely sure why she broke your liaison off in the first place: she just went away without warning one day, and you didn’t hear of her again for several years, by which time her own archaeological career was under way.</p><p>You have another guilty secret.  In recent years your finds have been tailing off (all the best tombs have already been found) and you have resorted to buying black-market artifacts and pretending that they are your own finds.  Fortunately there is an active artifact-smuggling ring operating around Luxor, run by a mysterious figure known only as ‘Mr Big’, and you have been a good customer to them.</p><p>You have no idea who Mr Big might be, but you have a sneaking suspicion that it may be one of your guests tonight – <b>Merouf</b>, <b>de Chalons</b> or <b>Spanheim</b> – which is partly why you invited them.  You are considerably in debt to the smugglers, and in fear of being exposed if you don’t pay up.  If you can learn Mr Big’s true identity that will give you a blackmail card to play in return.  No danger of you being exposed then!</p>",
   relations: [
     {name: "Ariadne Price-Evans", person: "", desc: "Dig team member and briefly your lover in youth.  Is it too late to reawaken her heart to your charms?" },
     {name: "Hugh Carlaw", person: "", desc: "Dig team member.  A sound enough young fellow who has the makings of a decent archaeologist in him.  Reminds you a little of yourself, when you were younger." },
     {name: "Helen Mackinnon", person: "", desc: "Dig team member.  A pretty little thing, but she hasn’t got a proper mind and isn’t really suited to archaeology.  Will probably get married soon, and good luck to her." },
     {name: "Lindsay Wilde", person: "", desc: "Final dig team member.  A hard-working and bright student, from a poor background – an orphan – but rather sneaky, you feel." },
-    {name: "Shahfeez Merouf", person: "", desc: "The dig site owner.  He's a fanatic about keeping Egyptian artefacts in the country – a real pain to the smuggling ring.  You have great professional respect for Shahfeez’s work as curator of the Luxor Museum, though." },
+    {name: "Shahfeez Merouf", person: "", desc: "The dig site owner.  He's a fanatic about keeping Egyptian artifacts in the country – a real pain to the smuggling ring.  You have great professional respect for Shahfeez’s work as curator of the Luxor Museum, though." },
     {name: "Alvy Spanheim", person: "", desc: "You have met Alvy a few times at social and diplomatic occasions.  You know of the (slightly sinister) Embassador’s reputation as an interested amateur in matters Egyptological." },
     {name: "Eva de Chalons", person: "", desc: "You have never met Eva before, but she is famed as a glittering socialite.  Perhaps the attractions of your great brain might work on her, if you have no luck with <b>Ariadne</b>." }
   ],
   items: [
     "$70",
   ],
-  magic: false,
   abilities: [
     abilities.suddenInsight,
     abilities.aMomentOfPassion,
@@ -224,6 +223,28 @@ let people = {
   "DRUM": {person: "Snuggz", character: alvySpanheim },
   "DUCK": {person: "Carolyn", character: lindsayWild }
 };
+
+
+
+
+let addPlayersToCharacter = function(character, people) {
+  for (let i = 0; i < character.relations.length; i++) {
+    //for (let j = 0; j < this.people.length; j++) {
+    //for (const player in Object.keys(people)) {
+    Object.keys(people).forEach(function(player) {
+      if (character.relations[i].name == people[player].character.name) {
+        character.relations[i].person = people[player].person;
+      }
+    });
+  }
+}
+
+
+
+addPlayersToCharacter(lindsayWild, people);
+
+
+
 
 
 
