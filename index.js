@@ -56,11 +56,13 @@ let alvySpanheim = {
   gender: "M",
   desc: "Ambassador of the German Consulate.",
   seenAs: "German, hearty, and a bit sinister",
-  scenarioInfo: "<p>You are the ambassador of German affairs in Cairo.  As a proud German, you are keen to promote instability in areas of German enemies, including here in Egypt, which is currently under British rule.  It shouldn't take too much to rouse the native population against the foolish British – even something small like this dig could be the trigger if the archaeologists were to do something that was really unpopular with the local people</p><p>You also have a secret – you are a leading member of a secret society called The Crimson Sash, a group harking back to when a great king known as the Crimson Pharaoh ruled the land.  If his body can be found, you and your fellows hope to magically resurrect him and stand by his side as he leads his armies to cleanse Egypt of the unbelievers.  The Crimson Pharaoh was originally slain by his treacherous wife, Queen Bity. She has her own followers – the cult of Re-Harakhty, who are fanatics opposed to the Crimson Sash.</p><p>Although these foolish Oxford archaeologists do not realize it, this dig is close to where the Sash’s ancient writings declare the Crimson Pharaoh’s secret resting-place to be.  It might be good to check out the possibility that your dead lord’s body might be recovered, or that any artifacts found in the dig might be useful in resurrecting him</p><p>That's why you were delighted when <b>Sir William</b> invited you to celebrate the opening of an ancient tomb.  It saved you the trouble of finding some excuse to visit.  And it should have been a good night, except that one of the diggers has been killed and may rather spoil the atmosphere.</p><p>To aid to your Crimson Sash activities, you set up a smuggling ring in the Luxor area.  You were originally buying artifacts in case they belonged to the Crimson Pharaoh.  However, you soon found it profitable selling them to wealthy collectors.  To your surprise, <b>Sir William Saville</b> has been a big customer of yours.  It seems that his recent digs have not been turning up decent finds, so he has been buying artifacts from your people to make his results look more impressive.  Lately he has not been paying his bills, though, and your agents have threatened to expose him as a fraud unless he pays up.  He has no idea of your identity as ‘Mr Big’ (nor does anyone else, as far as you know), and it’s better if it stays that way.</p>",
+  background: "<p>You are the ambassador of German affairs in Cairo.  As a proud German, you are keen to promote instability in areas of German enemies, including here in Egypt, which is currently under British rule.  It shouldn't take too much to rouse the native population against the foolish British – even something small like this dig could be the trigger if the archaeologists were to do something that was really unpopular with the local people</p><p>You also have a secret – you are a leading member of a secret society called The Crimson Sash, a group harking back to when a great king known as the Crimson Pharaoh ruled the land.  If his body can be found, you and your fellows hope to magically resurrect him and stand by his side as he leads his armies to cleanse Egypt of the unbelievers.  The Crimson Pharaoh was originally slain by his treacherous wife, Queen Bity. She has her own followers – the cult of Re-Harakhty, who are fanatics opposed to the Crimson Sash.</p>",
+  invitationInfo: "You were invited to the party by <b>Sir William Saville</b> personally.",
+  motives: "<p>Although these foolish Oxford archaeologists do not realize it, this dig is close to where the Sash’s ancient writings declare the Crimson Pharaoh’s secret resting-place to be.  It might be good to check out the possibility that your dead lord’s body might be recovered, or that any artifacts found in the dig might be useful in resurrecting him</p><p>That's why you were delighted when <b>Sir William</b> invited you to celebrate the opening of an ancient tomb.  It saved you the trouble of finding some excuse to visit.  And it should have been a good night, except that one of the diggers has been killed and may rather spoil the atmosphere.</p><p>To aid to your Crimson Sash activities, you set up a smuggling ring in the Luxor area.  You were originally buying artifacts in case they belonged to the Crimson Pharaoh.  However, you soon found it profitable selling them to wealthy collectors.  To your surprise, <b>Sir William Saville</b> has been a big customer of yours.  It seems that his recent digs have not been turning up decent finds, so he has been buying artifacts from your people to make his results look more impressive.  Lately he has not been paying his bills, though, and your agents have threatened to expose him as a fraud unless he pays up.  He has no idea of your identity as ‘Mr Big’ (nor does anyone else, as far as you know), and it’s better if it stays that way.</p>",
   relations: [
-    {name: "Sir William Saville", person: "Wes", desc: "His archaeological group is the reason for the party.  They've made a big discovery.  That Sir William buys artifacts from you suggests that his great reputation as an archaeologist may be a little hollow." },
-    {name: "Eva de Chalons", person: "Rosie", desc: "You know her of old as a dilettante with an amateur interest in Egyptology. She may be a French secret agent." },
-    {name: "Shafeez Merouf", person: "Andy", desc: "Be wary – Shahfeez is a great enemy of artifact smugglers." }
+    {name: "Sir William Saville", person: "", desc: "His archaeological group is the reason for the party.  They've made a big discovery.  That Sir William buys artifacts from you suggests that his great reputation as an archaeologist may be a little hollow." },
+    {name: "Eva de Chalons", person: "", desc: "You know her of old as a dilettante with an amateur interest in Egyptology. She may be a French secret agent." },
+    {name: "Shafeez Merouf", person: "", desc: "Be wary – Shahfeez is a great enemy of artifact smugglers." }
   ],
   items: [
     "A small wooden stick, delicately carved into the likeness of a snake",
@@ -68,7 +70,6 @@ let alvySpanheim = {
     "Poison Antidote",
     "$170"
   ],
-  magic: true,
   abilities: [
     abilities.evaluation,
     abilities.interrogation,
@@ -78,6 +79,7 @@ let alvySpanheim = {
     abilities.callSnake
   ],
   goals: [
+    {name: "Learn more about the murder of Abu Nazir", desc: "Although Abu Nazir doesn't matter to you, you are still curious as to what happened.  You don't need anything getting in the way of black market operations."},
     {name: "The Crimson Pharaoh", desc: "Do what you can to aid his cause and hasten his return.  If you think this is his tomb and you find one of his sacred artifacts you could actually summon him tonight!"},
     {name: "Germany", desc: "Second only to your loyalty to the Crimson Sash is your love of your nation. You should seek any advantage for Germany."},
     {name: "Artifact Smuggling", desc: "Although you need to keep your identity as ‘Mr Big’ secret, you are always keen to pick up artifacts – one of the young archaeologists here might perhaps be a good source.  Young people always need money!"},
@@ -96,9 +98,11 @@ let ariadnePriceEvans = {
   gender: "F",
   desc: "veteran translator of Egyptian inscriptions.",
   seenAs: "intellectual, severe, and a bit frumpy",
-  background: "<p>You were raised in an orphanage in Worcestershire with no idea who your parents were. As a child you nourished a grudge against fate in general, and specifically against your parents for abandoning you. You decided that you would let nothing stand in the way of achieving happiness, and you channelled your fury into a fierce analytical intelligence and an astonishing capacity for hard work. Thanks to these qualities, you overcame your disadvantages of birth and won a scholarship to Oxford University, where you are studying Archaeology <b>under Sir William Saville</b>.</p>",
+  background: "<p>Your young life was ruined by the death of your fiancé, <b>Harry Flinders</b>, was stung by a scorpion at what should have been the moment of triumph, the discovery of the Eye of Horus.  Distraught and emotional, you immediately had a passionate fling with his research partner <b>William Saville</b>, but broke the liaison off in horror when you realized you were pregnant.  (And more distressing still, you have never been sure of whether it was by beloved <b>Harry</b> or not-so-beloved <b>William</b>.)  Fleeing secretly to a country retreat, you put the child up for adoption.</p><p>Some years later, once your archaeological career was established, you encountered <b>Sir William</b> again.  You forged a good working relationship with him and he invited you on this expedition.  <b>Harry</b> still looms large in your mind, though: you still have no clear idea of what happened that terrible day, and <b>William</b> has always been too moved by the recollection to go into details.</p><p>Your team has just uncovered the tomb of a unknown Pharaoh, and the Jade Scarab.  <b>Sir William</b> is having a party to celebrate tonight and he’s invited several guests.  It should have been a good night, except that the killing may rather spoil the atmosphere.</p>",
+  invitationInfo: "As a member of Sir William’s dig team, of course you’re invited!",
+  motives: "<p>Just before the party you saw young <b>Hugh</b> near the dig’s item table in just his underwear.  Puzzled, you watched as he took up a sacrificial dagger from the table and stalked back into the inner compound.  You do not think he had spotted you, and there didn’t seem to be anyone else about – the others were probably napping.  You went back to your town tent thinking little of it, but now it seems that Abu Nazir has been murdered with this same dagger!  You were disturbed to think that Hugh’s extremes of poverty (or anything other reason, come to that) would lead him to murder.  But he has not yet confessed to the crime and it looks like he does not intend to.</p><p>You are not sure how to broach the subject with <b>Hugh</b>.  He is poor and hard-working, and clearly in love with <b>Helen</b>, but why would he slay an innocent digger?  Being found guilty of killing even a native must carry a hefty prison sentence, not to mention the end of his promising career.  Why did he do it?</p><p>On another note, you have been deeply concerned by the artifact smuggling around Luxor.  It seems like half the items that are dug up then get stolen or sold and smuggled back to private collectors.  <b>Harry</b> would have deplored such activities and you know <b>William</b> has spoken out against the practice too.  Although you have never been approached by any would-be smuggler wishing to buy artifacts (you would have turned them straight over to the authorities), you are beginning to think maybe you should be more active in the fight.  You have in your pocket a small basalt cat statue from the dig, and plan to offer it for sale to anyone you suspect of being a smuggler – if they agree, they are definitely dodgy.</p>",
   relations: [
-    {name: "Sir William Saville", person: "Wes", desc: "The leader of your dig team.  You would like to feel closer to William, especially given that he might have been the father of your child, but somehow the spirit of Harry has always stood between you.  Perhaps if one day you could get him to talk about those tragic events, the barrier of ice might be broken." },
+    {name: "Sir William Saville", person: "", desc: "The leader of your dig team.  You would like to feel closer to William, especially given that he might have been the father of your child, but somehow the spirit of Harry has always stood between you.  Perhaps if one day you could get him to talk about those tragic events, the barrier of ice might be broken." },
     {name: "Hugh Carlaw", person: "", desc: "A charming young fellow on your dig team, who reminds you slightly of your lost love Harry – you feel sorry for him that his background is so poor." },
     {name: "Helen Mackinnon", person: "", desc: "Another member of your dig team.  A flightly young madam with no proper appreciation of the subject of archaeology.  You find her very tiresome and have no patience for her gigglish ways." },
     {name: "Lindsay Wilde", person: "", desc: "A hard-working and bright student on the dig team.  She is from a poor background – an orphan – and rather sneaky, you feel." },
@@ -115,6 +119,7 @@ let ariadnePriceEvans = {
     abilities.gainTrust
   ],
   goals: [
+    {name: "Learn more about the murder of Abu Nazir", desc: "Although it probably doesn't matter much to you, you are still curious as to how this could have happened."},
     {name: "Help Hugh", desc: "Find out what’s up with <b>Hugh</b>, and what could have driven him to such an act. He may be in need of your sympathy.  Unless he really is a brutal murderer, of course."},
     {name: "Help Sir William get the dig license renewed", desc: "He has to convince <b>Merouf</b> to allow you to continue digging here.  You only have to prove that you are on the trail of decent finds, so it should be straightforward."},
     {name: "Harry's death", desc: "What really happened that day? You’ve burned to know for decades, but <b>William</b> is so coy about it. Maybe there is some way he could be opened up."},
@@ -130,10 +135,48 @@ let ariadnePriceEvans = {
 
 
 
+let evaDeChalons = {
+  name: "Eva de Chalons",
+  gender: "F",
+  desc: "dilettante and art connoisseur.",
+  seenAs: "French, sophisticated, and a little seductive",
+  background: "<p>You are here posing as an art-loving dilettante, a role you live up to the full – you have a reputation as a fun-seeking vamp who tours the best parties of Europe.  While this is all true (and very enjoyable), there is much more to you than this flimsy stereotype.</p><p>First, you are a secret agent in the pay of the French Department of Foreign Affairs, with a brief to use any and all means at your disposal to destabilize enemies of France and convert useful neutrals into friends.  It would surely not take much to rouse the native population against the foolish British – even something small like this dig could be the trigger, if the archaeologists were to do something that was really unpopular with the local people.</p><p>You also have another secret – you are a member of a secret society called The Crimson Sash, a subversive group subtly active in Egypt, harking back to when a great king known as the Crimson Pharaoh ruled the land.  If his body can be found, you and your fellows hope to magically resurrect him and stand by his side as he leads his armies to cleanse Egypt of the unbelievers.</p>",
+  invitationInfo: "You aren't sure why <b>Sir William</b> invited you to the dig party, but it should certainly be interesting to see what his team have found.",
+  motives: "<p>Although these foolish Oxford archaeologists do not realize it, this dig is close to where the Sash’s ancient writings declare the Crimson Pharaoh’s secret resting-place to be. You are here therefore to check out the possibility that your dread lord’s body might be recovered, or that any artifacts found in the dig might be useful in resurrecting him.  You also have with you some poison (and the antidote), although this should only be used as a last resort!</p><p>The You know that Crimson Pharaoh was originally slain by his treacherous wife, Queen Bity.  She has her own followers – the cult of Re-Harakhty, who are fanatics opposed to the Crimson Sash, and you think some of them might be at the party.</p><p>That's why you were delighted when Sir William invited you to celebrate the opening of an ancient tomb; that saved you the trouble of finding some excuse to visit.  It should have been a good night, except that one of the diggers has been killed and may rather spoil the atmosphere.</p>",
+  relations: [
+    { name: "Shahfeez Merouf", person: "", desc: "The dig site owner.  He has a good reputation in Egyptian circles, and is definitely keen to keep ancient artifacts in the country." },
+    { name: "Alvy Spanheim", person: "", desc: "You have met Alvy a few times at diplomatic occasions.  You know of the (slightly sinister) Embassador’s reputation as an interested amateur in matters Egyptological.  No doubt working for Germany’s advantage and therefore probably not to be trusted." }
+  ],
+  items: [
+    "Poison Pills",
+    "Poison Antidote",
+    "$100"
+  ],
+  abilities: [
+    abilities.aMomentOfPassion,
+    abilities.success,
+    abilities.thoroughAppraisal
+  ],
+  goals: [
+    {name: "Learn more about the murder of Abu Nazir", desc: "Although it probably doesn't matter much to you, you are still curious why there was a murder on the dig site."},
+    {name: "The Crimson Pharaoh", desc: "Do what you can to aid his cause and hasten his return.  If you think this is his tomb and you find one of his sacred artifacts you could actually summon him tonight!"},
+    {name: "France", desc: "Second only to your loyalty to the Crimson Sash is your love of your nation. You should seek any advantage for France."},
+    {name: "Keep your cover", desc: "You are widely believed to be a fivolous seductress, a very useful guise for your real interests, so it is desirable to maintain that cover by acting up to it."}
+  ],
+  secrets: [
+    "You are a member of the Crimson Sash, devoted to revering an acient ruler known as The Crimson Pharaoh.",
+    "You are a secret agent working for the French Government."
+  ],
+  clue: "The dig is very close to where an ancient ruler known as The Crimson Pharaoh is thought to be buried."
+};
 
 
-let lindsayWild = {
-  name: "Linsday Wild",
+
+
+
+
+let lindsayWilde = {
+  name: "Lindsay Wilde",
   gender: "F",
   desc: "a wild by nature, brooding misfit on the archaeological scene.",
   seenAs: "moody, ambitious, and a bit sly",
@@ -158,7 +201,7 @@ let lindsayWild = {
     abilities.pickpocket
   ],
   goals: [
-    {name: "Learn more about the murder", desc: "Although it probably doesn't matter much to you, you are still curious as to how this could have happened to Abu Nazier."},
+    {name: "Learn more about the murder of Abu Nazir", desc: "Although it probably doesn't matter much to you, you are still curious as to how this could have happened."},
     {name: "Get money", desc: "Selling the Eye of Horus to ‘Mr Big’ will be the easiest way, if you can identify him.  Or stealing the Jade Scarab, but that would be pretty dangerous."},
     {name: "Help Sir William get the dig license renewed", desc: "He has to convince <b>Merouf</b> to allow you to continue digging here.  You only have to prove that you are on the trail of decent finds, so it should be straightforward."},
     {name: "Gain recognition", desc: "You will probably never know who your parents were, but in the absence of their approval, that of the world in general will have to do.  You are determined to boost your reputation as a fine young archaeologist."}
@@ -178,7 +221,9 @@ let williamSaville = {
   gender: "M",
   desc: "renowned archaeologist and leader of the dig.",
   seenAs: "very British, dynamic, and brilliant",
-  scenarioInfo: "<p>The opening of this tomb and the finding of the Jade Scarab should set the seal on your long and distinguished archaeological career, which has seen you rise to the very peak of your profession.  The Jade Scarab is a magnificent specimen and you've never seen a carved scarab like this with a diamond on it's back.  How very serendipitous that you had organised dinner for this evening – just when you have a truly remarkable find, the Jade Scarab, to celebrate.</p><p>As well as the other expedition members, you’ve invited three guests.  <b>Shahfeez Merouf</b>, as curator of the Luxor Museum, just had to be invited.  You need <b>Shahfeez</b> to renew your dig licence.  <b>Alvy Spanheim</b> is the German Embassador and you’ve heard that he has an interest in archaeology.  As for <b>Eva de Chalons</b>, that was a shot in the dark.  You’ve only heard of her reputation as a glamorous socialite, so it was a pleasant surprise when she accepted.  It should have been a good night, except that one of the diggers has been killed.  Still, you’re not going to let something like that upset your dinner party.</p><p>At least you didn’t have to steal the Jade Scarab – unlike the discovery that made your name, the Eye of Horus.  Harry Flinders really discovered the Eye of Horus: you were both young and daring, but it was he who translated the ancient map, he who identified the correct patch of sand to start digging, and he who should have got the credit for the discovery – had he not unfortunately died of scorpionbite the very same day.</p><p>You mourned publicly, dedicating the find to his memory, and were so convincing that you successfully won the heart (temporarily) of Harry’s fiancée <b>Ariadne Price-Evans</b>.  Ever since, however, your guilty secret has gnawed at you – it was you, consumed with envy and bitterness, who put the fatal scorpion into Harry’s boot.</p><p>Maybe even now it’s not too late to rekindle the flame with <b>Ariadne</b> – Harry’s death is far in the past, and you are still a fine figure of a man.  You are not entirely sure why she broke your liaison off in the first place: she just went away without warning one day, and you didn’t hear of her again for several years, by which time her own archaeological career was under way.</p><p>You have another guilty secret.  In recent years your finds have been tailing off (all the best tombs have already been found) and you have resorted to buying black-market artifacts and pretending that they are your own finds.  Fortunately there is an active artifact-smuggling ring operating around Luxor, run by a mysterious figure known only as ‘Mr Big’, and you have been a good customer to them.</p><p>You have no idea who Mr Big might be, but you have a sneaking suspicion that it may be one of your guests tonight – <b>Merouf</b>, <b>de Chalons</b> or <b>Spanheim</b> – which is partly why you invited them.  You are considerably in debt to the smugglers, and in fear of being exposed if you don’t pay up.  If you can learn Mr Big’s true identity that will give you a blackmail card to play in return.  No danger of you being exposed then!</p>",
+  background: "<p>As the leader of the dig, the opening of this tomb should set the seal on your long and distinguished archaeological career, which has seen you rise to the very peak of your profession.  How very serendipitous that you had organised dinner for this evening – just when you have a truly remarkable find, the Jade Scarab, to celebrate.</p><p>As well as the other expedition members, you’ve invited three guests.  <b>Shahfeez Merouf</b>, as curator of the Luxor Museum, just had to be invited.  You need <b>Shahfeez</b> to renew your dig licence.  You've also heard that <b>Alvy Spanheim</b>, a German Embassador, has an interest in archaeology.  As for <b>Eva de Chalons</b>, that was a shot in the dark.  You’ve only heard of her reputation as a glamorous socialite, so it was a pleasant surprise when she accepted.  It should have been a good night, except that one of the diggers has been killed.  Still, you’re not going to let something like that upset your dinner party.</p><p>At least you didn’t have to steal the Jade Scarab – unlike the discovery that made your name, the Eye of Horus.  Harry Flinders really discovered the Eye of Horus: you were both young and daring, but it was he who translated the ancient map, he who identified the correct patch of sand to start digging, and he who should have got the credit for the discovery – had he not unfortunately died of scorpionbite the very same day.</p><p>You mourned publicly, dedicating the find to his memory, and were so convincing that you successfully won the heart (temporarily) of Harry’s fiancée <b>Ariadne Price-Evans</b>.  Ever since, however, your guilty secret has gnawed at you – it was you, consumed with envy and bitterness, who put the fatal scorpion into Harry’s boot.</p>",
+  invitationInfo: "It was your discovery of the tomb that led you to have a celebratory dinner.  This is your party, so of course you're invited!",
+  motives: "<p>Maybe even now it’s not too late to rekindle the flame with <b>Ariadne</b> – Harry’s death is far in the past, and you are still a fine figure of a man.  You are not entirely sure why she broke your liaison off in the first place: she just went away without warning one day, and you didn’t hear of her again for several years, by which time her own archaeological career was under way.</p><p>You have another guilty secret.  In recent years your finds have been tailing off (all the best tombs have already been found) and you have resorted to buying black-market artifacts and pretending that they are your own finds.  Fortunately there is an active artifact-smuggling ring operating around Luxor, run by a mysterious figure known only as ‘Mr Big’, and you have been a good customer to them.</p><p>You have no idea who Mr Big might be, but you have a sneaking suspicion that it may be one of your guests tonight – <b>Merouf</b>, <b>de Chalons</b> or <b>Spanheim</b> – which is partly why you invited them.  You are considerably in debt to the smugglers, and in fear of being exposed if you don’t pay up.  If you can learn Mr Big’s true identity that will give you a blackmail card to play in return.  No danger of you being exposed then!</p>",
   relations: [
     {name: "Ariadne Price-Evans", person: "", desc: "Dig team member and briefly your lover in youth.  Is it too late to reawaken her heart to your charms?" },
     {name: "Hugh Carlaw", person: "", desc: "Dig team member.  A sound enough young fellow who has the makings of a decent archaeologist in him.  Reminds you a little of yourself, when you were younger." },
@@ -197,7 +242,7 @@ let williamSaville = {
     abilities.success
   ],
   goals: [
-    {name: "Ariadne", desc: "Try to win her heart, or at least friendship, again, and find out why she broke off your liaison and has been so distant all these years."},
+    {name: "Learn more about the murder of Abu Nazir", desc: "Although Abu Nazir doesn't matter much to you, you can't have anything theatening this dig."},
     {name: "Get the dig license renewed", desc: "You have to convince <b>Merouf</b> to allow you to continue digging here.  You only really need to prove that you are on the trail of decent finds – and with the discovery of the Jade Scarab you shouldn’t have any difficulty.  You’ve asked <b>Helen</b>, <b>Lindsay</b> and <b>Ariadne</b> to help you persuade <b>Merouf</b>, in case there’s a problem.  <b>Merouf</b> should have a blank licence form with him."},
     {name: "Don’t let anyone find out about your secrets", desc: "If it became known that you had killed Harry Flinders, or that some of your best ‘finds’ were bought from smugglers, your career would probably be over (not to mention possible charges of murder).  Fortunately nobody other than ‘Mr Big’ knows about the true source of your finds."},
     {name: "Identify ‘Mr Big’", desc: "You will be in a much stronger position if you can find out the true name of the mysterious figure behind the smuggling ring.  You think it’s one of your three guests, so tonight would be a good night to find out."}
@@ -216,32 +261,31 @@ let williamSaville = {
 
 
 
-
+// player info
 let people = {
-  "LION": {person: "Wes", character: williamSaville },
-  "CAKE": {person: "Abby", character: ariadnePriceEvans },
-  "DRUM": {person: "Snuggz", character: alvySpanheim },
-  "DUCK": {person: "Carolyn", character: lindsayWild }
+  "DRUM": {person: "Jeremy Solomon", character: alvySpanheim },
+  "CAKE": {person: "Abby Clark", character: ariadnePriceEvans },
+  "SHREK": {person:"Rose LeVally", character: evaDeChalons },
+  "DUCK": {person: "Carolyn LeVally", character: lindsayWilde },
+  "LION": {person: "Wesley Clark", character: williamSaville }
 };
 
 
 
 
-let addPlayersToCharacter = function(character, people) {
-  for (let i = 0; i < character.relations.length; i++) {
+// add player names to relationships
+Object.keys(people).forEach(function(character) {
+  let relationships = people[character].character.relations;
+  for (let i = 0; i < relationships.length; i++) {
     //for (let j = 0; j < this.people.length; j++) {
     //for (const player in Object.keys(people)) {
     Object.keys(people).forEach(function(player) {
-      if (character.relations[i].name == people[player].character.name) {
-        character.relations[i].person = people[player].person;
+      if (relationships[i].name == people[player].character.name) {
+        relationships[i].person = people[player].person;
       }
     });
   }
-}
-
-
-
-addPlayersToCharacter(lindsayWild, people);
+});
 
 
 
@@ -256,28 +300,32 @@ addPlayersToCharacter(lindsayWild, people);
 
 
 let blank = {
-  name: "Blank",
-  gender: "M",
-  desc: "",
+  name: "",
+  gender: "F",
+  desc: ".",
   seenAs: "",
-  scenarioInfo: "",
+  background: "<p></p>",
+  invitationInfo: "",
+  motives: "<p></p>",
   relations: [
     {name: "", person: "", desc: "" }
   ],
   items: [
-    "",
+    "$10"
   ],
-  magic: false,
   abilities: [
-    abilities.evaluation
+    abilities.evaluation,
+    abilities.thoroughAppraisal,
+    abilities.aMomentOfPassion,
+    abilities.pickpocket
   ],
   goals: [
-    {name: "", desc: ""}
+    {name: "Learn more about the murder", desc: "Although it probably doesn't matter much to you, you are still curious as to how this could have happened to Abu Nazir."}
   ],
   secrets: [
-    ""
+    "."
   ],
-  clue: ""
+  clue: "."
 };
 
 
