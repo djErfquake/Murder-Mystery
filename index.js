@@ -273,19 +273,19 @@ let people = {
 
 
 
-// // add player names to relationships
-// Object.keys(people).forEach(function(character) {
-//   let relationships = people[character].character.relations;
-//   for (let i = 0; i < relationships.length; i++) {
-//     //for (let j = 0; j < this.people.length; j++) {
-//     //for (const player in Object.keys(people)) {
-//     Object.keys(people).forEach(function(player) {
-//       if (relationships[i].name == people[player].character.name) {
-//         relationships[i].person = people[player].person;
-//       }
-//     });
-//   }
-// });
+// add player names to relationships
+Object.keys(people).forEach(function(character) {
+  let relationships = people[character].character.relations;
+  for (let i = 0; i < relationships.length; i++) {
+    //for (let j = 0; j < this.people.length; j++) {
+    //for (const player in Object.keys(people)) {
+    Object.keys(people).forEach(function(player) {
+      if (relationships[i].name == people[player].character.name) {
+        relationships[i].person = people[player].person;
+      }
+    });
+  }
+});
 
 
 
