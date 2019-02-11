@@ -174,6 +174,81 @@ let evaDeChalons = {
 
 
 
+let helenMackinnon = {
+  name: "Helen Mackinnon",
+  gender: "F",
+  desc: "the belle of Oxford College.",
+  seenAs: "spirited, frivolous, gorgeous",
+  background: "<p>You were drawn to Egyptology by a series of dreams that have been with you since childhood.  In them, an Ancient Egyptian Queen appears and acts out a ritual. Her husband is a cruel and mighty Pharaoh who wears a crimson sash around his chest and a fearsome scarab made of jade.  The Queen kneels before him, clearly begging for something.  He shakes his head in refusal. Her face contorted with fury, she pulls from her robe a golden eye from which a brilliant pale-green light bursts forth, searing the Pharaoh where he sits.  And that’s when you wake up.</p><p>You feel a strong sense of identity with the long-suffering Queen, who had clearly been provoked into this violent act.  Try as you might, though, you have been unable to identify either – they must come from one of those poorly-understood dark ages of Egyptian history.</p><p>To celebrate the opening of the tomb you and the rest of the team have found, <b>Sir William</b>b is holding a dinner to celebrate.  It should have been a good night, except that one of the diggers has been killed, which may spoil the atmosphere.</p>",
+  invitationInfo: "As a member of Sir William’s dig team, of course you’re invited!",
+  motives: "<p>When you give up archaeology, you hope to run a business – a small boutique, a fashion importing business, or a model agency – something glamorous, it doesn’t really matter what.  The trouble is that you will need money to set it up.  A rich husband would be good, but even better would be if you could persuade someone to invest in your ideas.</p><p>Tonight, though, you must focus on your team's new findings.  Just before the party, your team also uncovered the Jade Scarab.  It looks a little like what you've seen in your dreams, so you were relectant to touch it.  You needed to clean the artifact though, but when you touched the Jade Scarab, you collapsed and fainted.  You woke up just before the party started.</p>",
+  relations: [
+    {name: "Sir William Saville", person: "", desc: "Leader of your dig team.  A legend in archaeological circles, but he's a little showy.  He seems rather nervous too, forever talking to himself and glancing over his shoulder." },
+    {name: "Hugh Carlow", person: "", desc: "Dig team member and a charming chap who might make a suitable husband one day, if he has the money." },
+    {name: "Ariadne Price-Evans", person: "", desc: "Dig team member and good at her job, but stuffy and old." },
+    {name: "Lindsay Wilde", person: "", desc: "Dig team member.  Lindsay can be charming, but there’s clearly some sort of big chip on that shoulder." }
+  ],
+  items: [
+    "$10"
+  ],
+  abilities: [
+    abilities.aMomentOfPassion,
+    abilities.success,
+    abilities.thoroughAppraisal
+  ],
+  goals: [
+    {name: "Learn more about the murder", desc: "Although it probably doesn't matter much to you, you are a little scared about the murder of the digger, Abu Nazir."},
+    {name: "Your Dream", desc: "Maybe there is someone around all of these smart people who could explain it to you.  Although you wouldn't want to make yourself look like a crackpot."},
+    {name: "Help Sir William get the dig license renewed", desc: "He has to convince <b>Merouf</b> to allow you to continue digging here.  You only have to prove that you are on the trail of decent finds, so it should be straightforward."},
+    {name: "Find an Investor", desc: "Any cash you can raise will be helpful to put your business ideas into action.  With a lots of foreign guests here, there are bound to be some opportunities."}
+  ],
+  secrets: [
+    "You have strange vivid dreams about Ancient Egypt.",
+    "You suspect the Jade Scarab of being a horrid artifact of ancient evil"
+  ],
+  clue: "You saw <b>Ariadne Price-Evans</b> standing outside her tent, gazing over the direction of the items table, fifteen minutes before dinner started."
+};
+
+
+
+
+let hughCarlow = {
+  name: "Hugh Carlow",
+  gender: "M",
+  desc: "enthusiastic young student.",
+  seenAs: "enthusiastic, modest, and rather shy with women",
+  background: "<p>While you are still in the process of undertaking your bachelor’s degree at the University of Oxford, you decided to joint the archaeology team and their dig in Egypt.   You have been looking forward with excitement to working under the renowned Professors <b>Saville</b> and <b>Price-Evans</b>, and the reality has more than matched up to the expectation.</p><p>You hope that the fame of your discoveries will bring you something in the way of riches – you are from a rather impoverished background (your father was a country clergyman of reduced means) and you know that to make a buck in Egyptological circles you need a fair wad of banknotes to get started.  That's why you were excited when your team uncovered this previously unknown tomb, and the Jade Scarab.  The Scarab's quality of workmanship surely means it will be a prized museum exhibit, with which your name will be forever associated – the guarantee of a successful career.  It is therefore absolutely vital that the Scarab not be damaged.</p><p>To celebrate the opening of the tomb you and the rest of the team have found, <b>Sir William</b>b is holding a dinner to celebrate.  It should have been a good night, except that one of the diggers has been killed, which may spoil the atmosphere.</p>",
+  invitationInfo: "As a member of Sir William’s dig team, of course you’re invited!",
+  motives: "<p>Just before dinner, a very curious and disturbing thing happened to you.  You decided to have a quick nap, but were horrified and shocked to wake up, dressed just in your underpants, slumped on the floor just inside your tent doorway, your hands covered in blood.  You have no idea how you got there, and you assume you must have sleep-walked.  Your only memory is of a strange dream in which a sinister female voice muttered to you in a language you did not understand.  Panicking, you quickly washed your hands.</p><p>Shortly after, the body of Abu Nazir was discovered – stabbed to death.  Yet surely it cannot have been you who attacked him?  You have no memory of any such event, and you are generally an upright and moral person who would never dream of doing such violence to a stranger.  You are determined not to be arrested for a crime for which you were not responsible, and are very glad that no-one else saw your bloodied hands.  And of course you are keen to find the real killer – if there is wickedness going on here, you want to thwart it.</p>",
+  relations: [
+    {name: "Sir William Saville", person: "", desc: "A legend in archaeological circles.  Working for him is an inestimable privilege, although you sometimes wish he was a little less impatient.  Even with his great reputation, he still seems desperate to prove himself." },
+    {name: "Ariadne Price-Evans", person: "", desc: "Dig team member.  She has been very kind to you.  Even though you would not describe yourself as very perceptive, you can tell she is hiding an inner sadness of some kind." },
+    {name: "Helen Mackinnon", person: "", desc: "Dig team member.  You like her a lot and dream of asking for her hand in marriage some day." },
+    {name: "Lindsay Wilde", person: "", desc: "Dig team member.  You have never paid Lindsay much attention: a competent enough archaeologist, but with a sneaky air to match that ill-bred background, not unlike yourself." }
+  ],
+  items: [
+    "You have nothing of value here."
+  ],
+  abilities: [
+    abilities.flattery,
+    abilities.suddenInsight,
+    abilities.gainTrust
+  ],
+  goals: [
+    {name: "Find out what happened to you", desc: "You are worried it might happen again, and even more worried that you might be in the frame for Abu Nazir’s murder, so you must find out what was going on.  But you are nervous of telling anyone about your episode, in case they think you’re guilty, or just unfit to continue working in Egypt."},
+    {name: "Find out who really killed Abu Nazir", desc: "If not you, then who?  You want them brought to justice."},
+    {name: "Help Sir William get the dig license renewed", desc: "He has to convince <b>Merouf</b> to allow you to continue digging here.  You only have to prove that you are on the trail of decent finds, so it should be straightforward."},
+    {name: "Make some money", desc: "You want to ask <b>Helen</b> to marry you, but you are wary of doing so before you can demonstrate that you are able to support her in the manner to which she is accustomed.  So you therefore need to make some money somehow – or, at least, get the guarantee of a successful career."}
+  ],
+  secrets: [
+    "You woke up with blood on your hands just before dinner.",
+    "You are very poor."
+  ],
+  clue: "You have no useful information."
+};
+
+
+
 
 let lindsayWilde = {
   name: "Lindsay Wilde",
@@ -213,6 +288,41 @@ let lindsayWilde = {
   clue: "You grew up in an orphanage and do not know who your parents are."
 };
 
+
+
+
+let robertTregarne = {
+  name: "Robert Tregarne",
+  gender: "M",
+  desc: "Detective Sergeant in the Colonial Police.",
+  seenAs: "dedicated, thoughtful, and perceptive",
+  background: "<p>As a detective in the Colonial Police Force, your main duty is tracking down the miscreants responsible for petty crimes in and around Luxor – thefts mostly, and the occasional drunken brawl.  Luxor is not really a crime hotspot, so a possible murder is a very unusual and serious occurrence!</p><p>You have been despatched from the Luxor police station to this dig to investigate a killing.  Apparently one of the expedition diggers, a local named Abu Nazir, has been stabbed to death. As the game starts you have just arrived: it looks like the archaeologists are about to start some sort of dinner party.  No doubt your arrival will rather spoil the mood of celebration, but you are used to that.</p><p>[You will arrive at the dig site about ten minutes after the start of the game.  Most of the other characters are not expecting you – it was <b>Sir William</b> who sent word to the police.]</p>",
+  invitationInfo: "You haven't been invited, but rather have been assigned to investiage the murder of a local digger on an archaeology site.",
+  motives: "<p>Even though Abu Nazir was only a local, your station is taking this killing seriously and will be expecting you to do a good job.  Tensions between the English colonials and the locals have been growing lately. If it turns out that Abu Nazir was killed by an Englishman, this incident could turn into a flashpoint.  Your first task will be to find out who everyone is, and what they’re doing there.  Then establish that holy trinity of means, motive and opportunity.  It will look good for you if you can identify a suspect by the end of the evening.</p><p>There are some other issues on your mind, which may become relevant.  One particularly brutal band of nationalist thugs has been causing a lot of trouble lately – mostly lower-class Egyptians calling themselves the Brotherhood of the Crimson Sash (members always wear a sash of red silk).  They are a growing menace, and you would dearly love to know who or what is behind them.</p><p>The other local crime problem is artefact smuggling.  Selling items recovered from Egyptian tombs is strictly illegal – all items are supposed to pass through the Egyptian government.  However, private collectors are keen to pay large sums of money for these precious artefacts, and there are always a few who will risk smuggling them out for sale.  Here in Luxor there is an organized ring of smugglers who steal many of the artefacts that are dug up.  They are led by a shadowy figure known as ‘Mr Big’, whose true identity is unknown.  If you could find some clues to his identity, that would be a real feather in your cap.  And to arrest him would be even better!</p>",
+  relations: [
+    {name: "Sir William Saville", person: "", desc: "He called the station about the murder of one of the diggers on his archaeology site.  You know him to be a well-respected archaeologist who has been leading digs in this area for over twenty years.  His digs have never caused any significant trouble before now, although there was a rather sad incident back in 1870 when his digging partner Harry Flinders was bitten to death by a scorpion." }
+  ],
+  items: [
+    "$20"
+  ],
+  abilities: [
+    abilities.thoroughAppraisal,
+    abilities.success,
+    abilities.interrogation,
+    abilities.suddenInsight
+  ],
+  goals: [
+    {name: "Investigate the murder", desc: "See the body, interview everyone who might be involved, identify your suspects."},
+    {name: "Arrest the killer", desc: "Find out who killed Abu Nazir, and arrest them.  Preferably find out why as well, in case there is a bigger plot behind this death."},
+    {name: "Identify ‘Mr Big’", desc: "This should be an excellent place to gather clues to the smuggler boss’s identity:  one of these people might even be working for him!"},
+    {name: "Learn more about the Crimson Sash", desc: "Anything you can find out about this sinister and dangerous organization will be useful."},
+    {name: "Be politically sensitive", desc: "Your superiors have impressed upon you the need to prevent this incident becoming a flashpoint."}
+  ],
+  secrets: [
+    "You have no secrets."
+  ],
+  clue: "The Brotherhood of the Crimson Sash is a gang of nationalist thugs with terrorist leanings."
+};
 
 
 
@@ -266,7 +376,10 @@ let people = {
   "DRUM": {person: "Jeremy Solomon", character: alvySpanheim },
   "CAKE": {person: "Abby Clark", character: ariadnePriceEvans },
   "SHREK": {person:"Rose LeVally", character: evaDeChalons },
+  "HAND": {person:"Mandy Gross", character: helenMackinnon },
+  "FOOT": {person:"Kevin Stuntz", character: hughCarlow },
   "DUCK": {person: "Carolyn LeVally", character: lindsayWilde },
+  "CRAB": {person: "Eric Zimmerman", character: robertTregarne },
   "LION": {person: "Wesley Clark", character: williamSaville }
 };
 
