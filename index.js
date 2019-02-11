@@ -411,14 +411,23 @@ let williamSaville = {
 // player info
 let people = {
   "DRUM": {person: "Jeremy Solomon", character: alvySpanheim },
-  "CAKE": {person: "Abby Clark", character: ariadnePriceEvans },
+  "JANGLES": {person: "Rachel Pioch", character: ariadnePriceEvans },
   "SHREK": {person:"Rose LeVally", character: evaDeChalons },
   "HAND": {person:"Mandy Gross", character: helenMackinnon },
   "FOOT": {person:"Kevin Stuntz", character: hughCarlow },
   "DUCK": {person: "Carolyn LeVally", character: lindsayWilde },
-  "CRAB": {person: "Eric Zimmerman", character: robertTregarne },
+  "SOIL": {person: "Eric Zimmerman", character: robertTregarne },
   "FISH": {person: "Andy Schenkel", character: shahfeezMerouf },
-  "LION": {person: "Wesley Clark", character: williamSaville }
+  "BLIMP": {person: "Jonny Leigh", character: williamSaville }
+  //"CAKE": {person: "Abby Clark", character:  },
+  //"LION": {person: "Wesley Clark", character:  },
+  //"CARROT": {person: "Cait Zimmerman", character:  },
+  //"WAND": {person: "Brittany Solomon", character:  },
+  //"JOBIN": {person: "Jordan Rowsey", character:  },
+  //"YELLOW": {person: "Sam Jones", character:  },
+  //"ZEBRA": {person: "Jenny Jones", character:  },
+  //"BANJO": {person: "Dom Gray", character:  },
+  //"DONKEY": {person: "Gracie Gray", character:  },
 };
 
 
