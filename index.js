@@ -44,7 +44,9 @@ let abilities = {
   aMomentOfPassion: {name: "A Moment of Passion", desc: "Spend two minutes alone with a member of the opposite sex.  They must show you a Secret they haven't shown you before."},
   pickpocket: {name: "Pickpocket", desc: "Give this card to Calvin when you wish to pick someone's pocket in order to steal a single item or money card.  You may specify what you are stealing, but if you do not (or the victim does not have it) Calvin will take something at random."},
   success: {name: "Success!", desc: "If you’re asked to do a Rock-Paper-Scissors challenge, you can choose to automatically succeed at it."},
-  gainTrust: {name: "Gain Trust", desc: "Spend at least two minutes talking to somebody.  Then show them this card: they must show you a Secret they haven't shown you before."}
+  gainTrust: {name: "Gain Trust", desc: "Spend at least two minutes talking to somebody.  Then show them this card: they must show you a Secret they haven't shown you before."},
+  intimidation: {name: "Intimidation", desc: "Spend at least two minutes talking forcefully to another character.  Then show them this card:  they must show you all of their Goals."},
+  hypnosis: {name: "Hypnosis", desc: "Gaze into another character's eyes, then show them this card:  they must reveal to you all of their Secrets."}
 };
 
 
@@ -142,7 +144,7 @@ let evaDeChalons = {
   seenAs: "French, sophisticated, and a little seductive",
   background: "<p>You are here posing as an art-loving dilettante, a role you live up to the full – you have a reputation as a fun-seeking vamp who tours the best parties of Europe.  While this is all true (and very enjoyable), there is much more to you than this flimsy stereotype.</p><p>First, you are a secret agent in the pay of the French Department of Foreign Affairs, with a brief to use any and all means at your disposal to destabilize enemies of France and convert useful neutrals into friends.  It would surely not take much to rouse the native population against the foolish British – even something small like this dig could be the trigger, if the archaeologists were to do something that was really unpopular with the local people.</p><p>You also have another secret – you are a member of a secret society called The Crimson Sash, a subversive group subtly active in Egypt, harking back to when a great king known as the Crimson Pharaoh ruled the land.  If his body can be found, you and your fellows hope to magically resurrect him and stand by his side as he leads his armies to cleanse Egypt of the unbelievers.</p>",
   invitationInfo: "You aren't sure why <b>Sir William</b> invited you to the dig party, but it should certainly be interesting to see what his team have found.",
-  motives: "<p>Although these foolish Oxford archaeologists do not realize it, this dig is close to where the Sash’s ancient writings declare the Crimson Pharaoh’s secret resting-place to be. You are here therefore to check out the possibility that your dread lord’s body might be recovered, or that any artifacts found in the dig might be useful in resurrecting him.  You also have with you some poison (and the antidote), although this should only be used as a last resort!</p><p>The You know that Crimson Pharaoh was originally slain by his treacherous wife, Queen Bity.  She has her own followers – the cult of Re-Harakhty, who are fanatics opposed to the Crimson Sash, and you think some of them might be at the party.</p><p>That's why you were delighted when Sir William invited you to celebrate the opening of an ancient tomb; that saved you the trouble of finding some excuse to visit.  It should have been a good night, except that one of the diggers has been killed and may rather spoil the atmosphere.</p>",
+  motives: "<p>Although these foolish Oxford archaeologists do not realize it, this dig is close to where the Sash’s ancient writings declare the Crimson Pharaoh’s secret resting-place to be. You are here therefore to check out the possibility that your dread lord’s body might be recovered, or that any artifacts found in the dig might be useful in resurrecting him.  You also have with you some poison (and the antidote), although this should only be used as a last resort!</p><p>The You know that Crimson Pharaoh was originally slain by his treacherous wife, Queen Bity.  She has her own followers – the cult of Re-Harakhty, who are fanatics opposed to the Crimson Sash, and you think some of them might be at the party.</p><p>That's why you were delighted when <b>Sir William</b> invited you to celebrate the opening of an ancient tomb; that saved you the trouble of finding some excuse to visit.  It should have been a good night, except that one of the diggers has been killed and may rather spoil the atmosphere.</p>",
   relations: [
     { name: "Shahfeez Merouf", person: "", desc: "The dig site owner.  He has a good reputation in Egyptian circles, and is definitely keen to keep ancient artifacts in the country." },
     { name: "Alvy Spanheim", person: "", desc: "You have met Alvy a few times at diplomatic occasions.  You know of the (slightly sinister) Embassador’s reputation as an interested amateur in matters Egyptological.  No doubt working for Germany’s advantage and therefore probably not to be trusted." }
@@ -179,7 +181,7 @@ let helenMackinnon = {
   gender: "F",
   desc: "the belle of Oxford College.",
   seenAs: "spirited, frivolous, gorgeous",
-  background: "<p>You were drawn to Egyptology by a series of dreams that have been with you since childhood.  In them, an Ancient Egyptian Queen appears and acts out a ritual. Her husband is a cruel and mighty Pharaoh who wears a crimson sash around his chest and a fearsome scarab made of jade.  The Queen kneels before him, clearly begging for something.  He shakes his head in refusal. Her face contorted with fury, she pulls from her robe a golden eye from which a brilliant pale-green light bursts forth, searing the Pharaoh where he sits.  And that’s when you wake up.</p><p>You feel a strong sense of identity with the long-suffering Queen, who had clearly been provoked into this violent act.  Try as you might, though, you have been unable to identify either – they must come from one of those poorly-understood dark ages of Egyptian history.</p><p>To celebrate the opening of the tomb you and the rest of the team have found, <b>Sir William</b>b is holding a dinner to celebrate.  It should have been a good night, except that one of the diggers has been killed, which may spoil the atmosphere.</p>",
+  background: "<p>You were drawn to Egyptology by a series of dreams that have been with you since childhood.  In them, an Ancient Egyptian Queen appears and acts out a ritual. Her husband is a cruel and mighty Pharaoh who wears a crimson sash around his chest and a fearsome scarab made of jade.  The Queen kneels before him, clearly begging for something.  He shakes his head in refusal. Her face contorted with fury, she pulls from her robe a golden eye from which a brilliant pale-green light bursts forth, searing the Pharaoh where he sits.  And that’s when you wake up.</p><p>You feel a strong sense of identity with the long-suffering Queen, who had clearly been provoked into this violent act.  Try as you might, though, you have been unable to identify either – they must come from one of those poorly-understood dark ages of Egyptian history.</p><p>To celebrate the opening of the tomb you and the rest of the team have found, <b>Sir William</b> is holding a dinner to celebrate.  It should have been a good night, except that one of the diggers has been killed, which may spoil the atmosphere.</p>",
   invitationInfo: "As a member of Sir William’s dig team, of course you’re invited!",
   motives: "<p>When you give up archaeology, you hope to run a business – a small boutique, a fashion importing business, or a model agency – something glamorous, it doesn’t really matter what.  The trouble is that you will need money to set it up.  A rich husband would be good, but even better would be if you could persuade someone to invest in your ideas.</p><p>Tonight, though, you must focus on your team's new findings.  Just before the party, your team also uncovered the Jade Scarab.  It looks a little like what you've seen in your dreams, so you were relectant to touch it.  You needed to clean the artifact though, but when you touched the Jade Scarab, you collapsed and fainted.  You woke up just before the party started.</p>",
   relations: [
@@ -199,7 +201,7 @@ let helenMackinnon = {
   goals: [
     {name: "Learn more about the murder", desc: "Although it probably doesn't matter much to you, you are a little scared about the murder of the digger, Abu Nazir."},
     {name: "Your Dream", desc: "Maybe there is someone around all of these smart people who could explain it to you.  Although you wouldn't want to make yourself look like a crackpot."},
-    {name: "Help Sir William get the dig license renewed", desc: "He has to convince <b>Merouf</b> to allow you to continue digging here.  You only have to prove that you are on the trail of decent finds, so it should be straightforward."},
+    {name: "Help Sir William get the dig license renewed", desc: "He has to convince <b>Shahfeez Merouf</b>, the dig site owner, to allow you to continue digging here.  You only have to prove that you are on the trail of decent finds, so it should be straightforward."},
     {name: "Find an Investor", desc: "Any cash you can raise will be helpful to put your business ideas into action.  With a lots of foreign guests here, there are bound to be some opportunities."}
   ],
   secrets: [
@@ -217,7 +219,7 @@ let hughCarlow = {
   gender: "M",
   desc: "enthusiastic young student.",
   seenAs: "enthusiastic, modest, and rather shy with women",
-  background: "<p>While you are still in the process of undertaking your bachelor’s degree at the University of Oxford, you decided to joint the archaeology team and their dig in Egypt.   You have been looking forward with excitement to working under the renowned Professors <b>Saville</b> and <b>Price-Evans</b>, and the reality has more than matched up to the expectation.</p><p>You hope that the fame of your discoveries will bring you something in the way of riches – you are from a rather impoverished background (your father was a country clergyman of reduced means) and you know that to make a buck in Egyptological circles you need a fair wad of banknotes to get started.  That's why you were excited when your team uncovered this previously unknown tomb, and the Jade Scarab.  The Scarab's quality of workmanship surely means it will be a prized museum exhibit, with which your name will be forever associated – the guarantee of a successful career.  It is therefore absolutely vital that the Scarab not be damaged.</p><p>To celebrate the opening of the tomb you and the rest of the team have found, <b>Sir William</b>b is holding a dinner to celebrate.  It should have been a good night, except that one of the diggers has been killed, which may spoil the atmosphere.</p>",
+  background: "<p>While you are still in the process of undertaking your bachelor’s degree at the University of Oxford, you decided to joint the archaeology team and their dig in Egypt.   You have been looking forward with excitement to working under the renowned Professors <b>Saville</b> and <b>Price-Evans</b>, and the reality has more than matched up to the expectation.</p><p>You hope that the fame of your discoveries will bring you something in the way of riches – you are from a rather impoverished background (your father was a country clergyman of reduced means) and you know that to make a buck in Egyptological circles you need a fair wad of banknotes to get started.  That's why you were excited when your team uncovered this previously unknown tomb, and the Jade Scarab.  The Scarab's quality of workmanship surely means it will be a prized museum exhibit, with which your name will be forever associated – the guarantee of a successful career.  It is therefore absolutely vital that the Scarab not be damaged.</p><p>To celebrate the opening of the tomb you and the rest of the team have found, <b>Sir William</b> is holding a dinner to celebrate.  It should have been a good night, except that one of the diggers has been killed, which may spoil the atmosphere.</p>",
   invitationInfo: "As a member of Sir William’s dig team, of course you’re invited!",
   motives: "<p>Just before dinner, a very curious and disturbing thing happened to you.  You decided to have a quick nap, but were horrified and shocked to wake up, dressed just in your underpants, slumped on the floor just inside your tent doorway, your hands covered in blood.  You have no idea how you got there, and you assume you must have sleep-walked.  Your only memory is of a strange dream in which a sinister female voice muttered to you in a language you did not understand.  Panicking, you quickly washed your hands.</p><p>Shortly after, the body of Abu Nazir was discovered – stabbed to death.  Yet surely it cannot have been you who attacked him?  You have no memory of any such event, and you are generally an upright and moral person who would never dream of doing such violence to a stranger.  You are determined not to be arrested for a crime for which you were not responsible, and are very glad that no-one else saw your bloodied hands.  And of course you are keen to find the real killer – if there is wickedness going on here, you want to thwart it.</p>",
   relations: [
@@ -237,7 +239,7 @@ let hughCarlow = {
   goals: [
     {name: "Find out what happened to you", desc: "You are worried it might happen again, and even more worried that you might be in the frame for Abu Nazir’s murder, so you must find out what was going on.  But you are nervous of telling anyone about your episode, in case they think you’re guilty, or just unfit to continue working in Egypt."},
     {name: "Find out who really killed Abu Nazir", desc: "If not you, then who?  You want them brought to justice."},
-    {name: "Help Sir William get the dig license renewed", desc: "He has to convince <b>Merouf</b> to allow you to continue digging here.  You only have to prove that you are on the trail of decent finds, so it should be straightforward."},
+    {name: "Help Sir William get the dig license renewed", desc: "He has to convince <b>Shahfeez Merouf</b>, the dig site owner, to allow you to continue digging here.  You only have to prove that you are on the trail of decent finds, so it should be straightforward."},
     {name: "Make some money", desc: "You want to ask <b>Helen</b> to marry you, but you are wary of doing so before you can demonstrate that you are able to support her in the manner to which she is accustomed.  So you therefore need to make some money somehow – or, at least, get the guarantee of a successful career."}
   ],
   secrets: [
@@ -278,7 +280,7 @@ let lindsayWilde = {
   goals: [
     {name: "Learn more about the murder of Abu Nazir", desc: "Although it probably doesn't matter much to you, you are still curious as to how this could have happened."},
     {name: "Get money", desc: "Selling the Eye of Horus to ‘Mr Big’ will be the easiest way, if you can identify him.  Or stealing the Jade Scarab, but that would be pretty dangerous."},
-    {name: "Help Sir William get the dig license renewed", desc: "He has to convince <b>Merouf</b> to allow you to continue digging here.  You only have to prove that you are on the trail of decent finds, so it should be straightforward."},
+    {name: "Help Sir William get the dig license renewed", desc: "He has to convince <b>Shahfeez Merouf</b>, the dig site owner, to allow you to continue digging here.  You only have to prove that you are on the trail of decent finds, so it should be straightforward."},
     {name: "Gain recognition", desc: "You will probably never know who your parents were, but in the absence of their approval, that of the world in general will have to do.  You are determined to boost your reputation as a fine young archaeologist."}
   ],
   secrets: [
@@ -324,6 +326,41 @@ let robertTregarne = {
   clue: "The Brotherhood of the Crimson Sash is a gang of nationalist thugs with terrorist leanings."
 };
 
+
+
+
+let shahfeezMerouf = {
+  name: "Shahfeez Merouf",
+  gender: "M",
+  desc: "mysterious Egyptian, and the Curator of the Luxor Museum.",
+  seenAs: "solumn and determined",
+  background: "<p>You are the Curator of the Luxor Museum, a post of great prestige and responsibility – but it is not your most important role.  You are secretly the High Priest of the ancient cult of Re-Harakhty.  Your cult has survived to the modern era with its purpose intact – to prevent the return of the abominable Crimson Pharaoh and to frustrate the efforts of his worshippers, a vile cult known as The Crimson Sash.</p><p>You granted permission to the Oxford dig in what seemed a safe enough area, but some of the initial diggings worry you.  They suggest that the tomb is older than was at first thought, maybe of the era of the Crimson Pharaoh himself.  If artifacts are recovered that turn out to be linked to the Crimson Pharaoh, his repulsive worshippers will get their hands on them and evil will march upon the world!  Fortunately, <b>Sir William’s</b> dig permit has now run out and it is up to you to decide whether or not to renew it: hence your invitation here today.</p><p>You have known, <b>Sir William</b> since 1870, when he was plain Mr Saville. You were a digger working for him and Harry Flinders, and it was thanks to Harry’s friendly interest that you surmounted the obstacles and rose to your present status in the Egyptological world.  What a tragedy that Harry died, and what a contrast there was between the two men then – one generous and good-hearted, the other mean-spirited and shifty.  You saw <b>William</b> fiddling with his partner’s boots shortly before Harry’s death from scorpion bite, and have often wondered whether the two events could have been connected.</p>",
+  invitationInfo: "<b>Sir William Saville</b> invited you to the celebration of his archaeology team's newest find.",
+  motives: "<p>It is possible that <b>Sir William</b> is linked to the Crimson Sash.  Back in that 1870 dig, he recovered the Eye of Horus, a golden artifact which you have since learnt was used by the Crimson Pharaoh’s wife, Queen Bity, to slay him in the first place.  This item would be most useful in countering the Crimson Pharaoh’s new-rising power.  But it was taken by <b>Sir William</b> to the Ashmolean Museum in Oxford, and stolen from there just a couple of months ago!  Prophecies say that Queen Bity will return to help people of good will against the Crimson Pharaoh’s return, and although you can’t quite see how that’s going to work, you are all in favour.  She sounds like a rather redoubtable woman.  You have been looking out for signs of her, and you wonder if it is just your imagination that makes the young archaeologist <b>Miss Helen Mackinnon</b> appear almost Egyptian in profile in certain lights.  If she is a reincarnation of Queen Bity, though, she must surely not realize it.</p><p>You have another concern which has brought you here today – artifact smuggling.  Someone, known only as ‘Mr Big’, is stealing and shifting large quantities of priceless relics from the Luxor area, and selling them on to private collectors.  You have the strong suspicion that it is <b>Sir William Saville</b>: he certainly is the most active digger hereabouts.  If you can get any evidence, you can call in a police investigation.</p>",
+  relations: [
+    {name: "Sir William Saville", person: "", desc: "A skilful and cunning adversary, if he is indeed ‘Mr Big’.  You must be very careful around him, and prepared for any tricks he might pull.  He does not know that you once worked for him as a digger, and would probably be very surprised." }
+  ],
+  items: [
+    "The Truth Powder of Imhotep",
+    "$20"
+  ],
+  abilities: [
+    abilities.evaluation,
+    abilities.intimidation,
+    abilities.hypnosis
+  ],
+  goals: [
+    {name: "Learn more about the murder", desc: "A local man mysteriously dying at one of <b>Sir William's</b> sites seems awfully fishy."},
+    {name: "The Work of Re-Harakhty", desc: "You must oppose the Crimson Sash and its evil doings, at all costs.  Don't let the Crimson Sash get any powerful artifacts, under any circumstances."},
+    {name: "Artifact smugglers", desc: "Second only to your loyalty to Re-Harakhty is your love for your job.  You are desperately keen to break up the artifact-smuggling ring and expose and arrest ‘Mr Big’."},
+    {name: "Decide whether or not to renew the dig licence", desc: "Although it probably doesn't matter much to you, you are still curious as to how this could have happened to Abu Nazir."}
+  ],
+  secrets: [
+    "You are the High Priest of Re-Harakhty, sworn to oppose an evil organization known as The Crimson Sash.",
+    "You worked as a digger for <b>Sir William Saville</b> and Harry Flinders, near here, back in 1870."
+  ],
+  clue: "Harry Flinders was killed in 1870, while he was working with <b>Sir William Saville</b>, by a poisonous scorpion someone had placed in his boot."
+};
 
 
 let williamSaville = {
@@ -380,6 +417,7 @@ let people = {
   "FOOT": {person:"Kevin Stuntz", character: hughCarlow },
   "DUCK": {person: "Carolyn LeVally", character: lindsayWilde },
   "CRAB": {person: "Eric Zimmerman", character: robertTregarne },
+  "FISH": {person: "Andy Schenkel", character: shahfeezMerouf },
   "LION": {person: "Wesley Clark", character: williamSaville }
 };
 
