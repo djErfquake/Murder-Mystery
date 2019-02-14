@@ -266,7 +266,7 @@ let hughCarlow = {
   seenAs: "enthusiastic, modest, and rather shy with women",
   background: "<p>While you are still in the process of undertaking your bachelor’s degree at the University of Oxford, you decided to joint the archaeology team and their dig in Egypt.   You have been looking forward with excitement to working under the renowned Professors Saville and Price-Evans, and the reality has more than matched up to the expectation.</p><p>You hope that the fame of your discoveries will bring you something in the way of riches – you are from a rather impoverished background (your father was a country clergyman of reduced means) and you know that to make a buck in Egyptological circles you need a fair wad of banknotes to get started.  That's why you were excited when your team uncovered this previously unknown tomb, and the Jade Scarab.  The Scarab's quality of workmanship surely means it will be a prized museum exhibit, with which your name will be forever associated – the guarantee of a successful career.  It is therefore absolutely vital that the Scarab not be damaged.</p><p>To celebrate the opening of the tomb you and the rest of the team have found, Sir William is holding a dinner to celebrate.  It should have been a good night, except that one of the diggers has been killed, which may spoil the atmosphere.</p>",
   invitationInfo: "As a member of Sir William’s dig team, of course you’re invited!",
-  motives: "<p>Just before dinner, a very curious and disturbing thing happened to you.  You decided to have a quick nap, but were horrified and shocked to wake up, dressed just in your underpants, slumped on the floor just inside your tent doorway, your hands covered in blood.  You have no idea how you got there, and you assume you must have sleep-walked.  Your only memory is of a strange dream in which a sinister female voice muttered to you in a language you did not understand.  Panicking, you quickly washed your hands.</p><p>Shortly after, the body of Abu Nazir was discovered – stabbed to death.  Yet surely it cannot have been you who attacked him?  You have no memory of any such event, and you are generally an upright and moral person who would never dream of doing such violence to a stranger.  You are determined not to be arrested for a crime for which you were not responsible, and are very glad that no-one else saw your bloodied hands.  And of course you are keen to find the real killer – if there is wickedness going on here, you want to thwart it.</p>",
+  motives: "<p>Just before dinner, a very curious and disturbing thing happened to you.  You were walking back to your tent when found a rather nice blue pen laying on the ground outside of it.  You picked it up, but it isn't yours.  Maybe it belongs to Sir William or Ariadne.  After that, you decided to have a quick nap, but were horrified and shocked to wake up, dressed just in your underpants, slumped on the floor just inside your tent doorway, your hands covered in blood.  You have no idea how you got there, and you assume you must have sleep-walked.  Your only memory is of a strange dream in which a sinister female voice muttered to you in a language you did not understand.  Panicking, you quickly washed your hands.</p><p>Shortly after, the body of Abu Nazir was discovered – stabbed to death.  Yet surely it cannot have been you who attacked him?  You have no memory of any such event, and you are generally an upright and moral person who would never dream of doing such violence to a stranger.  You are determined not to be arrested for a crime for which you were not responsible, and are very glad that no-one else saw your bloodied hands.  And of course you are keen to find the real killer – if there is wickedness going on here, you want to thwart it.</p>",
   relations: [
     {name: "Sir William Saville", person: "", desc: "A legend in archaeological circles.  Working for him is an inestimable privilege, although you sometimes wish he was a little less impatient.  Even with his great reputation, he still seems desperate to prove himself." },
     {name: "Ariadne Price-Evans", person: "", desc: "Dig team member.  She has been very kind to you.  Even though you would not describe yourself as very perceptive, you can tell she is hiding an inner sadness of some kind." },
@@ -274,7 +274,7 @@ let hughCarlow = {
     {name: "Lindsay Wilde", person: "", desc: "Dig team member.  You have never paid Lindsay much attention: a competent enough archaeologist, but with a sneaky air to match that ill-bred background, not unlike yourself." }
   ],
   items: [
-    "You have nothing of value here."
+    "a blue pen."
   ],
   abilities: [
     abilities.flattery,
@@ -696,7 +696,7 @@ let godfreyFox = {
   name: "Reverend Godfrey Fox",
   gender: "M",
   desc: "Cambridge-based church minister.",
-  seenAs: "easily ammused, exaggeratedly English, and not particulaly devout",
+  seenAs: "easily ammused, exaggeratedly English, and not particularly devout",
   background: "<p>You are the minister in a quiet Cambridge parish, with plenty of time to indulge your hobby of excavating Egyptian tombs, helping Professor Mathers recover fine ancient artifacts and bring them back to civilization.</p><p>Actually, that's not true.  Your real name is Gottfried Fuchs, and you are a secret agent working for the government of Germany.  You are on a highly secret mission to gather valuable and powerful Egyptian artifacts, for Germany to use if there should be war amongst the European powers.  Even your wife Angela has no idea that you are secretly a German, so perfect is your imposture.  You pride yourself that your upper lip is stiffer, your chin more receding, and your shoes more shiny than even a real Englishman's.</p><p>You are not sure whether you are really in the best archaeological group for obtaining artifacts – Professor Mathers is rather too careful for your liking.  It would be worth checking out the alternatives and seeing if you might be better off transferring to a different dig – which you can do freely, as long as your wife agrees.</p><p>You are not quite happy about your wife.  You wooed and won her quickly and easily when you first came to England a few years ago, but she has been very incurious about your background – she has never asked to meet your family, for example.  Maybe this is just the famed English reserve, but it still seems odd to you.  Furthermore, she is forever travelling up to London by herself.  Is she keeping secrets from you?  Maybe another woman might be able to shed light on this odd behaviour.</p>",
   invitationInfo: "You have come to the party uninvited with Mathers.  She has the intention of teasing the Sir William Saville's team over their lack of significant findings because of their friendly rivalry.",
   motives: "<p>You are particularly interested in the Oxford group's dig, which you are visiting this evening, because they are excavating in what might be the area of the tomb of an ancient ruler known as the Crimson Pharaoh, dating from the XVIth Dynasty.  This pharaoh was a very powerful one who was, so the stories go, laid low by the use of an artifact called the Jade Scarab.  If this scarab is in the neighborhood, it is just the sort of thing that your bosses are keen for you to obtain.  And who would ever suspect a kindly clergyman of theft?</p><p>You are also eager to obtain an artifact recovered by your own digging group, a particularly fine Agate Mask. Professor Mathers dug it up while working by herself, and she has kept it close to herself since, but you are sure it must be powerful – or at least valuable – so you would like to steal it if you get the chance.  This would be more difficult, so it might be good to try and frame someone else for the crime...</p>",
@@ -761,6 +761,40 @@ let angelaFox = {
 
 
 
+let blakeRoberts = {
+  name: "Blake Roberts",
+  gender: "M",
+  desc: "freelance reporter.",
+  seenAs: "nosy",
+  background: "<p>Quite often (you've not really known why) you are drawn to places.  Big news stories break and you are always there to cover it.  It's almost as if some higher being is guiding your hand.  The most recent tugging has brought you here, to Luxor.  You aren't sure why you've been drawn here, but your sixth sense has brought you here, which means there must be something going on, and you are going to find out what.</p><p>You have heard that Sir William Saville (the leader of the expedition, and this party's organizer) has discovered a new tomb.  You arrived earlier this afternoon and already there has been a murder!</p>",
+  invitationInfo: "You weren't invited to the party, but you intend to report on the findings and the people surrounding this excavation anyway.",
+  motives: "<p>While you are excited about pretty much any story, what you'd really like is a fat juicy story that you can sell around the world.  That would set you up for life and you could settle down, raise a family, and retire.  At the moment there's not much chance of that happening.  In fact, you're broke.  So you'd better find a story here as quickly as possible.</p><p>Another immediate problem is that you've lost your lucky pen soon after you've arrived.  It is a particularly fine blue pen, which was given to you by your mother on the first day you started working as a reporter.  Since you've lost it, you haven't been very lucky.  It might be that without it, the story might never present itself.</p>",
+  relations: [
+    {name: "Sir William Saville", person: "", desc: "Even though you've never met him, you've heard that this dig, like most of his digs, has produced something wonderful." }
+  ],
+  items: [
+    "You have nothing of value here."
+  ],
+  abilities: [
+    abilities.suddenInsight,
+    abilities.Gossip,
+    abilities.gainTrust
+  ],
+  goals: [
+    {name: "Learn more about the murder", desc: "It could be a big story, the death of a digger on this excavation."},
+    {name: "Find your lucky pen", desc: "You've just got to find your lucky blue pen!  You know you won't get the juiciest stories without it!"},
+    {name: "Find some news", desc: "Find as many news stores as you can.  Interview people, stick your nose in other people's affairs."},
+    {name: "Get some cash", desc: "You are very short of cash.  Maybe you can make some money by finding some secrets and bribing people not to report it."}
+  ],
+  secrets: [
+    "You have no secrets."
+  ],
+  clue: "You have no clues."
+};
+
+
+
+
 // player info
 let people = {
   "DRUM": {person: "Jeremy Solomon", character: alvySpanheim },
@@ -777,7 +811,7 @@ let people = {
   "DUNKAROO": {person: "Cait Zimmerman", character: alexMcQueen },
   "WAND": {person: "Brittany Solomon", character: janeFortescue },
   "JOBIN": {person: "Jordan Rowsey", character: chrisKovacs },
-  //"YELLOW": {person: "Sam Jones", character:  },
+  "YELLOW": {person: "Sam Jones", character: blakeRoberts },
   "LEOPARD": {person: "Jenny Jones", character: reginaMathers },
   "HAWK": {person: "Shane Huntley", character: godfreyFox },
   "FART": {person: "Stephanie Huntley", character: angelaFox },
@@ -814,34 +848,7 @@ Object.keys(people).forEach(function(character) {
 
 
 
-let blank = {
-  name: "",
-  gender: "F",
-  desc: ".",
-  seenAs: "",
-  background: "<p></p>",
-  invitationInfo: "",
-  motives: "<p></p>",
-  relations: [
-    {name: "", person: "", desc: "" }
-  ],
-  items: [
-    "$10"
-  ],
-  abilities: [
-    abilities.evaluation,
-    abilities.thoroughAppraisal,
-    abilities.aMomentOfPassion,
-    abilities.pickpocket
-  ],
-  goals: [
-    {name: "Learn more about the murder", desc: "Although it probably doesn't matter much to you, you are still curious as to how this could have happened to Abu Nazir."}
-  ],
-  secrets: [
-    "."
-  ],
-  clue: "."
-};
+
 
 
 
