@@ -46,13 +46,55 @@ let abilities = {
   gainTrust: {name: "Gain Trust", desc: "Spend at least two minutes talking to somebody.  Then show them this card: they must show you a Secret they haven't shown you before."},
   intimidation: {name: "Intimidation", desc: "Spend at least two minutes talking forcefully to another character.  Then show them this card:  they must show you all of their Goals."},
   hypnosis: {name: "Hypnosis", desc: "Gaze into another character's eyes, then show them this card:  they must reveal to you all of their Secrets."},
-  gossip: {name: "Gossip", desc: "After talking with any person, show them this card and they must truthfully tell you everything they know about another person of your choice."}
+  gossip: {name: "Gossip", desc: "After talking with any person, show them this card and they must truthfully tell you everything they know about another person of your choice."},
+  oops: {name: "Oops", desc: "Show this card during any Rock-Paper-Scissors challenge and the person you choose will automatically lose."},
+  sensePower: {name: "Sense Power", desc: "See Calvin when holding an artifact to study it for to see if it has magical powers."}
 };
 
 
 
 
 // setup character data here
+let williamSaville = {
+  name: "Sir William Saville",
+  gender: "M",
+  desc: "renowned archaeologist and leader of the dig.",
+  seenAs: "very British, dynamic, and brilliant",
+  background: "<p>As the leader of the dig, the opening of this tomb should set the seal on your long and distinguished archaeological career, which has seen you rise to the very peak of your profession.  How very serendipitous that you had organised dinner for this evening – just when you have a truly remarkable find, the Jade Scarab, to celebrate.</p><p>As well as the other expedition members, you’ve invited three guests.  Shahfeez Merouf, as curator of the Luxor Museum, just had to be invited.  You need Shahfeez to renew your dig licence.  You've also heard that Alvy Spanheim, a German Embassador, has an interest in archaeology.  As for Eva de Chalons, that was a shot in the dark.  You’ve only heard of her reputation as a glamorous socialite, so it was a pleasant surprise when she accepted.  It should have been a good night, except that one of the diggers has been killed.  Still, you’re not going to let something like that upset your dinner party.</p><p>At least you didn’t have to steal the Jade Scarab – unlike the discovery that made your name, the Eye of Horus.  Harry Flinders really discovered the Eye of Horus: you were both young and daring, but it was he who translated the ancient map, he who identified the correct patch of sand to start digging, and he who should have got the credit for the discovery – had he not unfortunately died of scorpionbite the very same day.</p><p>You mourned publicly, dedicating the find to his memory, and were so convincing that you successfully won the heart (temporarily) of Harry’s fiancée Ariadne Price-Evans.  Ever since, however, your guilty secret has gnawed at you – it was you, consumed with envy and bitterness, who put the fatal scorpion into Harry’s boot.</p>",
+  invitationInfo: "It was your discovery of the tomb that led you to have a celebratory dinner.  This is your party, so of course you're invited!",
+  motives: "<p>Maybe even now it’s not too late to rekindle the flame with Ariadne – Harry’s death is far in the past, and you are still a fine figure of a man.  You are not entirely sure why she broke your liaison off in the first place: she just went away without warning one day, and you didn’t hear of her again for several years, by which time her own archaeological career was under way.</p><p>You have another guilty secret.  In recent years your finds have been tailing off (all the best tombs have already been found) and you have resorted to buying black-market artifacts and pretending that they are your own finds.  Fortunately there is an active artifact-smuggling ring operating around Luxor, run by a mysterious figure known only as ‘Mr Big’, and you have been a good customer to them.</p><p>You have no idea who Mr Big might be, but you have a sneaking suspicion that it may be one of your guests tonight – Merouf, de Chalons or Spanheim – which is partly why you invited them.  You are considerably in debt to the smugglers, and in fear of being exposed if you don’t pay up.  If you can learn ‘Mr Big’'s true identity that will give you a blackmail card to play in return.  No danger of you being exposed then!</p>",
+  relations: [
+    {name: "Ariadne Price-Evans", person: "", desc: "Dig team member and briefly your lover in youth.  Is it too late to reawaken her heart to your charms?" },
+    {name: "Hugh Carlow", person: "", desc: "Dig team member.  A sound enough young fellow who has the makings of a decent archaeologist in him.  Reminds you a little of yourself, when you were younger." },
+    {name: "Helen Mackinnon", person: "", desc: "Dig team member.  A pretty little thing, but she hasn’t got a proper mind and isn’t really suited to archaeology.  Will probably get married soon, and good luck to her." },
+    {name: "Lindsay Wilde", person: "", desc: "Final dig team member.  A hard-working and bright student, from a poor background – an orphan – but rather sneaky, you feel." },
+    {name: "Shahfeez Merouf", person: "", desc: "The dig site owner.  He's a fanatic about keeping Egyptian artifacts in the country – a real pain to the smuggling ring.  You have great professional respect for Shahfeez’s work as curator of the Luxor Museum, though." },
+    {name: "Professor Regina Mathers", person: "", desc: "You are not sure whether to be pleased or annoyed to see the Cambridge archaeological team, led by Professor Regina Mathers, appear here unexpectedly tonight. In general you are keen to spend time with fellow-professionals, and they are a fine bunch of chaps.  But you fear that Mathers may have come here to tease you about how much more successful her group is than yours, which would be rather galling and bad for your team's morale." }
+  ],
+  items: [
+    "$70",
+  ],
+  abilities: [
+    abilities.suddenInsight,
+    abilities.aMomentOfPassion,
+    abilities.success
+  ],
+  goals: [
+    {name: "Learn more about the murder of Abu Nazir", desc: "Although Abu Nazir doesn't matter much to you, you can't have anything theatening this dig."},
+    {name: "Get the dig license renewed", desc: "You have to convince Merouf to allow you to continue digging here.  You only really need to prove that you are on the trail of decent finds – and with the discovery of the Jade Scarab you shouldn’t have any difficulty.  You’ve asked Helen, Lindsay and Ariadne to help you persuade Merouf, in case there’s a problem.  Merouf should have a blank licence form with him."},
+    {name: "Don’t let anyone find out about your secrets", desc: "If it became known that you had killed Harry Flinders, or that some of your best ‘finds’ were bought from smugglers, your career would probably be over (not to mention possible charges of murder).  Fortunately nobody other than ‘Mr Big’ knows about the true source of your finds."},
+    {name: "Identify ‘Mr Big’", desc: "You will be in a much stronger position if you can find out the true name of the mysterious figure behind the smuggling ring.  You think it’s one of your three guests, so tonight would be a good night to find out."}
+  ],
+  secrets: [
+    "You killed Harry Flinders by putting a scorpion in his boot.",
+    "You are buying antiquities from ‘Mr Big’."
+  ],
+  clue: "Earlier today your team opened the tomb and removed the Jade Scarab from it."
+};
+
+
+
+
 let alvySpanheim = {
   name: "Alvy Spanheim",
   gender: "M",
@@ -107,10 +149,11 @@ let ariadnePriceEvans = {
   motives: "<p>Just before the party you saw young Hugh near the dig’s item table in just his underwear.  Puzzled, you watched as he took up a sacrificial dagger from the table and stalked back into the inner compound.  You do not think he had spotted you, and there didn’t seem to be anyone else about – the others were probably napping.  You went back to your town tent thinking little of it, but now it seems that Abu Nazir has been murdered with this same dagger!  You were disturbed to think that Hugh’s extremes of poverty (or anything other reason, come to that) would lead him to murder.  But he has not yet confessed to the crime and it looks like he does not intend to.</p><p>You are not sure how to broach the subject with Hugh.  He is poor and hard-working, and clearly in love with Helen, but why would he slay an innocent digger?  Being found guilty of killing even a native must carry a hefty prison sentence, not to mention the end of his promising career.  Why did he do it?</p><p>On another note, you have been deeply concerned by the artifact smuggling around Luxor.  It seems like half the items that are dug up then get stolen or sold and smuggled back to private collectors.  Harry would have deplored such activities and you know William has spoken out against the practice too.  Although you have never been approached by any would-be smuggler wishing to buy artifacts (you would have turned them straight over to the authorities), you are beginning to think maybe you should be more active in the fight.  You have in your pocket a small basalt cat statue from the dig, and plan to offer it for sale to anyone you suspect of being a smuggler – if they agree, they are definitely dodgy.</p>",
   relations: [
     {name: "Sir William Saville", person: "", desc: "The leader of your dig team.  You would like to feel closer to William, especially given that he might have been the father of your child, but somehow the spirit of Harry has always stood between you.  Perhaps if one day you could get him to talk about those tragic events, the barrier of ice might be broken." },
-    {name: "Hugh Carlaw", person: "", desc: "A charming young fellow on your dig team, who reminds you slightly of your lost love Harry – you feel sorry for him that his background is so poor." },
+    {name: "Hugh Carlow", person: "", desc: "A charming young fellow on your dig team, who reminds you slightly of your lost love Harry – you feel sorry for him that his background is so poor." },
     {name: "Helen Mackinnon", person: "", desc: "Another member of your dig team.  A flightly young madam with no proper appreciation of the subject of archaeology.  You find her very tiresome and have no patience for her gigglish ways." },
     {name: "Lindsay Wilde", person: "", desc: "A hard-working and bright student on the dig team.  She is from a poor background – an orphan – and rather sneaky, you feel." },
-    {name: "Shahfeez Merouf", person: "", desc: "Dig site owner.  He is dedicated to keeping Egyptian artifacts in the country, a cause of which you thoroughly approve.  You have great professional respect for Shahfeez’s work as curator of the Luxor Museum." }
+    {name: "Shahfeez Merouf", person: "", desc: "Dig site owner.  He is dedicated to keeping Egyptian artifacts in the country, a cause of which you thoroughly approve.  You have great professional respect for Shahfeez’s work as curator of the Luxor Museum." },
+    {name: "Lady Jane Fortescue", person: "", desc: "You are pleased to see the Cambridge archaeological team, led by Professor Regina Mathers, especially because included in her team is Lady Jane.  You knew Lady Jane Fortescue way back in your schooldays.  You were friends then, and suspect that she is the real brains on the Cambridge team." }
   ],
   items: [
     "Cat Statuette Artifact",
@@ -366,43 +409,7 @@ let shahfeezMerouf = {
 };
 
 
-let williamSaville = {
-  name: "Sir William Saville",
-  gender: "M",
-  desc: "renowned archaeologist and leader of the dig.",
-  seenAs: "very British, dynamic, and brilliant",
-  background: "<p>As the leader of the dig, the opening of this tomb should set the seal on your long and distinguished archaeological career, which has seen you rise to the very peak of your profession.  How very serendipitous that you had organised dinner for this evening – just when you have a truly remarkable find, the Jade Scarab, to celebrate.</p><p>As well as the other expedition members, you’ve invited three guests.  Shahfeez Merouf, as curator of the Luxor Museum, just had to be invited.  You need Shahfeez to renew your dig licence.  You've also heard that Alvy Spanheim, a German Embassador, has an interest in archaeology.  As for Eva de Chalons, that was a shot in the dark.  You’ve only heard of her reputation as a glamorous socialite, so it was a pleasant surprise when she accepted.  It should have been a good night, except that one of the diggers has been killed.  Still, you’re not going to let something like that upset your dinner party.</p><p>At least you didn’t have to steal the Jade Scarab – unlike the discovery that made your name, the Eye of Horus.  Harry Flinders really discovered the Eye of Horus: you were both young and daring, but it was he who translated the ancient map, he who identified the correct patch of sand to start digging, and he who should have got the credit for the discovery – had he not unfortunately died of scorpionbite the very same day.</p><p>You mourned publicly, dedicating the find to his memory, and were so convincing that you successfully won the heart (temporarily) of Harry’s fiancée Ariadne Price-Evans.  Ever since, however, your guilty secret has gnawed at you – it was you, consumed with envy and bitterness, who put the fatal scorpion into Harry’s boot.</p>",
-  invitationInfo: "It was your discovery of the tomb that led you to have a celebratory dinner.  This is your party, so of course you're invited!",
-  motives: "<p>Maybe even now it’s not too late to rekindle the flame with Ariadne – Harry’s death is far in the past, and you are still a fine figure of a man.  You are not entirely sure why she broke your liaison off in the first place: she just went away without warning one day, and you didn’t hear of her again for several years, by which time her own archaeological career was under way.</p><p>You have another guilty secret.  In recent years your finds have been tailing off (all the best tombs have already been found) and you have resorted to buying black-market artifacts and pretending that they are your own finds.  Fortunately there is an active artifact-smuggling ring operating around Luxor, run by a mysterious figure known only as ‘Mr Big’, and you have been a good customer to them.</p><p>You have no idea who Mr Big might be, but you have a sneaking suspicion that it may be one of your guests tonight – Merouf, de Chalons or Spanheim – which is partly why you invited them.  You are considerably in debt to the smugglers, and in fear of being exposed if you don’t pay up.  If you can learn ‘Mr Big’'s true identity that will give you a blackmail card to play in return.  No danger of you being exposed then!</p>",
-  relations: [
-    {name: "Ariadne Price-Evans", person: "", desc: "Dig team member and briefly your lover in youth.  Is it too late to reawaken her heart to your charms?" },
-    {name: "Hugh Carlaw", person: "", desc: "Dig team member.  A sound enough young fellow who has the makings of a decent archaeologist in him.  Reminds you a little of yourself, when you were younger." },
-    {name: "Helen Mackinnon", person: "", desc: "Dig team member.  A pretty little thing, but she hasn’t got a proper mind and isn’t really suited to archaeology.  Will probably get married soon, and good luck to her." },
-    {name: "Lindsay Wilde", person: "", desc: "Final dig team member.  A hard-working and bright student, from a poor background – an orphan – but rather sneaky, you feel." },
-    {name: "Shahfeez Merouf", person: "", desc: "The dig site owner.  He's a fanatic about keeping Egyptian artifacts in the country – a real pain to the smuggling ring.  You have great professional respect for Shahfeez’s work as curator of the Luxor Museum, though." },
-    {name: "Alvy Spanheim", person: "", desc: "You have met Alvy a few times at social and diplomatic occasions.  You know of the (slightly sinister) Embassador’s reputation as an interested amateur in matters Egyptological." },
-    {name: "Eva de Chalons", person: "", desc: "You have never met Eva before, but she is famed as a glittering socialite.  Perhaps the attractions of your great brain might work on her, if you have no luck with Ariadne." }
-  ],
-  items: [
-    "$70",
-  ],
-  abilities: [
-    abilities.suddenInsight,
-    abilities.aMomentOfPassion,
-    abilities.success
-  ],
-  goals: [
-    {name: "Learn more about the murder of Abu Nazir", desc: "Although Abu Nazir doesn't matter much to you, you can't have anything theatening this dig."},
-    {name: "Get the dig license renewed", desc: "You have to convince Merouf to allow you to continue digging here.  You only really need to prove that you are on the trail of decent finds – and with the discovery of the Jade Scarab you shouldn’t have any difficulty.  You’ve asked Helen, Lindsay and Ariadne to help you persuade Merouf, in case there’s a problem.  Merouf should have a blank licence form with him."},
-    {name: "Don’t let anyone find out about your secrets", desc: "If it became known that you had killed Harry Flinders, or that some of your best ‘finds’ were bought from smugglers, your career would probably be over (not to mention possible charges of murder).  Fortunately nobody other than ‘Mr Big’ knows about the true source of your finds."},
-    {name: "Identify ‘Mr Big’", desc: "You will be in a much stronger position if you can find out the true name of the mysterious figure behind the smuggling ring.  You think it’s one of your three guests, so tonight would be a good night to find out."}
-  ],
-  secrets: [
-    "You killed Harry Flinders by putting a scorpion in his boot.",
-    "You are buying antiquities from ‘Mr Big’."
-  ],
-  clue: "Earlier today your team opened the tomb and removed the Jade Scarab from it."
-};
+
 
 
 
@@ -575,6 +582,183 @@ let fatimaAlMansoor = {
 
 
 
+let reginaMathers = {
+  name: "Professor Regina Mathers",
+  gender: "F",
+  desc: "respected archaeologist from Cambridge.",
+  seenAs: "sharp and sarcastic",
+  background: "<p>You are Professor of Archaeology at the University of Cambridge in England, a woman at the head of your profession, widely respected all round the world.  Sir William Saville, the Oxford team's leader, has been a rival of yours for many years, and you are delighted that your own team has had somewhat greater success.</p><p>Although you are a success, you have a slightly uneasy feeling about it.  The fact is that really you are very dependent on your team's talents – particularly Lady Jane.  Without her and the others, you would not be much of an archaeologist.</p><p>The rest of your team – the Foxes and young Chris Kovacs – are a pretty hopeless bunch really.  Kovacs has promise, and maybe after a few more years' apprenticeship (ie. fetching and carrying!) will have the makings of a decent archaeologist, but Godfrey and Angela Fox are typical dilettantes with no real dedication to the profession.  You constantly have the feeling that their attention is elsewhere, or that they are just filling in time waiting for something.  (Maybe this is just as well, or they might have caught on to your artifact forgery by now.)</p><p>That said, they are charming people and good company, and to be honest Lady Jane has enough archaeological skill to carry the lot of you. But if you could persuade any of the Oxford group to join yours, that would be an excellent coup – with or without Sir William's blessing. And you'd be happy to offer Kovacs or the Foxes in exchange!</p>",
+  invitationInfo: "You have come to the party uninvited with the intention of teasing the Sir William Saville's team over their lack of significant findings.",
+  motives: "<p>Sir William used to work with a good friend of yours, a man named Harry Flinders.  Harry died young, upwards of twenty years ago now, while out on a dig no far from this site.  He was stung by a scorpion: this surprised you, as generally he was very careful about such dangerous animals.  You have always wondered whether there was anything more to the story</p><p>Although most of your success can't be attributed to you, You do have one useful skill, though – that of forging fake ancient artifacts. You use this to make your digs seem more impressive than they actually are.  You have never yet been detected, or even suspected by your colleagues.  You have with you one of your forgeries, an excellent mask made of agate, typical of the XVIth Dynasty: you plan to show it off to Sir William and the others.</p><p>You told your colleagues that you found the Agate Mask while digging by yourself: this is quite a common practice of yours, and they are not at all suspicious.</p>",
+  relations: [
+    {name: "Sir William Saville", person: "", desc: "A highly skilled and capable archaeologist, but has not had the best of luck with his digs in recent years.  You are on terms of friendly rivalry." },
+    {name: "Lady Jane Fortescue", person: "", desc: "Member of your dig team.  Your trusted right hand, brilliant and reliable – but she is the only person to whom you reveal how much you depend on her." },
+    {name: "Reverend Godfrey Fox", person: "", desc: "Member of your dig team. A bit of a bumbler, but extremely keen.  Not much of a Bible-basher, considering his profession." },
+    {name: "Angela Fox", person: "", desc: "Member of your dig team.  A brisk, efficient woman who makes herself useful to the team – although with no real archaeological skill, as far as you can see." },
+    {name: "Chris Kovacs", person: "", desc: "Member of your dig team.  An obedient and helpful young student – a foreigner, but that can't be helped.  In time might make a decent scholar." }
+  ],
+  items: [
+    "$80"
+  ],
+  abilities: [
+    abilities.suddenInsight,
+    abilities.oops
+  ],
+  goals: [
+    {name: "Learn more about the murder", desc: "Although it probably doesn't matter much to you, you are still curious as to how this could have happened to Abu Nazir, and can't wait to rub it in to Sir William if it is his fault."},
+    {name: "Show off the Agate Mask", desc: "And generally lord it over the Oxford team, as your excavation has been so much more successful than theirs.  But, ensure no-one finds out that you faked the Agate Mask, and a number of other previous artifacts."},
+    {name: "LFind out what happened to Harry Flinders", desc: "You are curious about the way the brilliant young archaeologist died, all those years ago."},
+    {name: "Learn more about the murder", desc: "Although it probably doesn't matter much to you, you are still curious as to how this could have happened to Abu Nazir, and can't wait to rub it in to Sir William if it is his fault."},
+    {name: "Recruit Sir William's assistants", desc: "You are keen to persuade some decent archaeologists to join your team.  In exchange you would be happy to lose the Foxes, and even Chris Kovacs if need be."}
+  ],
+  secrets: [
+    "The Agate Mask is not a genuine artifact, but a forgery you made yourself."
+  ],
+  clue: "Sir William's former partner, Harry Flinders, died while they were on a dig together twenty years ago, not far from here."
+};
+
+
+
+let janeFortescue = {
+  name: "Lady Jane Fortescue",
+  gender: "F",
+  desc: "noble widow and archaelogical dilettante.",
+  seenAs: "feather-brained, posh, and twittering",
+  background: "<p>You are a wealthy English widow, who indulges herself by playing at archaeology, and who has bought herself a position in Cambridge close to the renowned Professor Regina Mathers.  Actually, that's not quite true.  You are really a very fine archaeologist in your own right, and Regina is lucky to have you in her team, and she knows it.  You play along with the story that you are no more than a dilenttante, but Regina would be the first to ackowledge – in private! – that you are the brains of the outfit.</p><p>Although Regina is not as brilliant an archaeologist as she would like to think, she does have a knack for finding prize artifacts.  Just the other day, while digging by himself, she unearthed a gorgeous Agate Mask, dating from the XVIth Dynasty.  She is bound to want to show this off to the Oxford team, as it is from their specialist period.  You hope that she is not too patronizing about their lack of success so far</p>",
+  invitationInfo: "You have come to the party uninvited with Mathers.  She has the intention of teasing the Sir William Saville's team over their lack of significant findings because of their friendly rivalry.",
+  motives: "<p>You are pleased to see Ariadne Price-Evans here this evening – you have not seen her for many years.  You were at school together and were great friends.  Ariadne was on a scholarship, as she was from a rather poor background, but this didn't stop you treating her kindly.  Ariadne was engaged to be married not long after leaving school,  but the man died: you can't remember his name.  You dimly remember that there was some kind of scandal about it – she was expecting a child, or some such.  No doubt she would prefer not to be reminded about that! – but your curiosity is considerable.</p><p>You get on well with the team's junior members, the Foxes and young Chris Kovacs.  Kovacs has the potential to become a really talented archaeologist, showing a genuine feel for and understanding of the relics of the ancient civilizations you disturb.  Definitely to be encouraged to persist through this boring period of apprenticeship!  Promise.  Godfrey and Angela Fox on the other hand are no more than dilettantes, with no real gift for the profession.  Not that there's anything wrong with that, but you constantly have the feeling that their attention is elsewhere, or that they are just filling in time waiting for something.  The other odd thing is that they don't seem very attached to one another, for a fairly newly married couple.</p><p>That said, they are charming people and good company, and to be honest you, Regina and Chris have enough archaeological skill to carry the lot of you.  But it will be nice to socialize this evening with some more real archaeologists, even if Regina is not keen for you to reveal your own expertise fully!</p>",
+  relations: [
+    {name: "Professor Regina Mathers", person: "", desc: "Your boss in name only.  She would never admit to anyone else how much she depends on you.  But you are curiously fond of her, the grumpy old sweetie." },
+    {name: "Reverend Godfrey Fox", person: "", desc: "A member of your dig team.  A bit of a bumbler, but extremely keen.  Not much of a Bible-basher, considering his profession." },
+    {name: "Angela Fox", person: "", desc: "A member of your dig team.  A brisk, efficient woman who makes herself useful to the team, although with no real archaeological skill, as far as you can see." },
+    {name: "Chris Kovacs", person: "", desc: "A member of your dig team.  An obedient and helpful young student and a foreigner, but with a real talent for the trade.  Seems to have been rather depressed just lately." },
+    {name: "Ariadne Price-Evans", person: "", desc: "An old friend with a troubled past." }
+  ],
+  items: [
+    "$60"
+  ],
+  abilities: [
+    abilities.suddenInsight,
+    abilities.oops
+  ],
+  goals: [
+    {name: "Learn more about the murder of Abu Nazir", desc: "Although it probably doesn't matter much to you, you are still curious as to how this could have happened this local digger.  Could this be trouble for your own dig site?"},
+    {name: "Support your team", desc: "For better or for worse, you are Regina's assistant, and so you should support her in everything she does (as long as it's not illegal, of course.)  Also, Chris has something bothering him.  Maybe you can help."},
+    {name: "Keep an eye on the Foxes", desc: "It's not that you suspect them of being up to anything, exactly.  But you definitely have the sense that they're not giving you the full story."},
+    {name: "Find out what Ariadne's been up to", desc: "In particular, although maybe better not ask her directly, what happened with the man she was engaged to, the pregnancy, and so on."}
+  ],
+  secrets: [
+    "You are secretly the brains of the Cambridge team.  Professor Regina Mathers would be nothing without you."
+  ],
+  clue: "Ariadne was engaged to be married in her youth, and you have an idea she might have fallen pregnant."
+};
+
+
+
+
+let chrisKovacs = {
+  name: "Chris Kovacs",
+  gender: "M",
+  desc: "young Hungarian student.",
+  seenAs: "intense, nervous, and hard-working",
+  background: "<p>You are a young student working as an assistant to the renowned archaeologist Professor Regina Mathers.  This is a great opportunity for you, as you are from a very poor background: your job is to do as you're told, and not ask questions, and eventually you will gain in status and become accepted by the Cambridge academic community.  You seem to be doing well and have a knack for history.</p><p>Since moving to England, you have felt rather lonely.  The Cambridge people are not very welcoming to foreigners, particularly poor ones.  You are keen to find some sort of social group that will accept you as a member, and you think that Egypt might be the ideal place.  There are dozens of cults, secret societies and the like, and some of them probably aren't too fussy about whom they accept (which is just as well.)  You are also not too fussy about what sort of group you might join, even if it's one that some people might think of as slightly suspect.</p><p>Of your colleagues, only Lady Jane is ever very kind or friendly to you: the others pretty much ignore you.  You understand that this is part of being the junior member of the team, but even so it seems a bit harsh.  Professor Mathers is always off digging by herself, and the Foxes spend a lot of time wandering around by themselves too.  They seem to spend very little time together as a couple, which seems odd to you, although maybe that's normal for the English: you've heard that they are a very repressed race.</p>",
+  invitationInfo: "You have come to the party uninvited with Mathers.  She has the intention of teasing the Sir William Saville's team over their lack of significant findings because of their friendly rivalry.",
+  motives: "<p>You have become very worried recently about some of the items that your group has excavated.  They look quite normal, and are fully authentic as far as you can see – but they feel 'dead', lacking entirely in the power and 'specialness' that Egyptian historical artifacts should have.  You have not said anything to your colleagues about this yet, because you think that they would probably laugh at you or regard you strangely.  You think that they do not really have a sense of this power in the way that you do.  Professor Mathers has brought with her a beautiful piece she dug up recently, an Agate Mask dating from the XVIth dynasty, but to you it seems as dead and flat as if it had been carved yesterday.  You are not sure if this is important, or what to do about it, but it is definitely worrying you.  It would be good to talk to someone about it, but preferably not one of your team!</p><p>Your other problem is that you are chronically short of money.  You are paid a pittance, and your family's Hungarian wealth is worth virtually nothing in England.  Meeting up with all these wealthy people might present some good opportunities to earn some cash, running errands or helping someone out.  You should keep your eyes open for any such possibility.</p>",
+  relations: [
+    {name: "Professor Regina Mathers", person: "", desc: "Your boss in name only.  You are rather scared of her temper, and treat her with great respect, as she could fire you on a whim." },
+    {name: "Lady Jane Fortescue", person: "", desc: "A member of your dig team.  She is kind and friendly to you, unlike the others. A very grand lady." },
+    {name: "Reverend Godfrey Fox", person: "", desc: "A member of your dig team.  For a minister, he hardly ever talks about God or the Bible, and he doesn't seem very devout. But maybe that is the English way." },
+    {name: "Angela Fox", person: "", desc: "A member of your dig team.  A brisk, efficient woman who makes herself useful to the team, although with no real archaeological skill, as far as you can see." }
+  ],
+  items: [
+  ],
+  abilities: [
+    abilities.thoroughAppraisal,
+    abilities.gossip,
+    abilities.sensePower
+  ],
+  goals: [
+    {name: "Learn more about the murder", desc: "Although it probably doesn't matter much to you, you are still curious as to how this could have happened."},
+    {name: "Keep your job", desc: "You simply cannot afford to be fired, and that means keeping Professor Mathers happy however you can.."},
+    {name: "Find a group to join", desc: "You're not too bothered what, but you desperately want to be involved with people who respect you as a co-member.  Maybe you could even get paid.  Someone here must want something doing they'll pay you money for."},
+    {name: "Work out what to do about the 'dead' artifacts", desc: "But it had better not be anything that will annoy the Professor..."}
+  ],
+  secrets: [
+    "You have no secrets."
+  ],
+  clue: "The Foxes do not act much like a married couple."
+};
+
+
+
+
+let godfreyFox = {
+  name: "Reverend Godfrey Fox",
+  gender: "M",
+  desc: "Cambridge-based church minister.",
+  seenAs: "easily ammused, exaggeratedly English, and not particulaly devout",
+  background: "<p>You are the minister in a quiet Cambridge parish, with plenty of time to indulge your hobby of excavating Egyptian tombs, helping Professor Mathers recover fine ancient artifacts and bring them back to civilization.</p><p>Actually, that's not true.  Your real name is Gottfried Fuchs, and you are a secret agent working for the government of Germany.  You are on a highly secret mission to gather valuable and powerful Egyptian artifacts, for Germany to use if there should be war amongst the European powers.  Even your wife Angela has no idea that you are secretly a German, so perfect is your imposture.  You pride yourself that your upper lip is stiffer, your chin more receding, and your shoes more shiny than even a real Englishman's.</p><p>You are not sure whether you are really in the best archaeological group for obtaining artifacts – Professor Mathers is rather too careful for your liking.  It would be worth checking out the alternatives and seeing if you might be better off transferring to a different dig – which you can do freely, as long as your wife agrees.</p><p>You are not quite happy about your wife.  You wooed and won her quickly and easily when you first came to England a few years ago, but she has been very incurious about your background – she has never asked to meet your family, for example.  Maybe this is just the famed English reserve, but it still seems odd to you.  Furthermore, she is forever travelling up to London by herself.  Is she keeping secrets from you?  Maybe another woman might be able to shed light on this odd behaviour.</p>",
+  invitationInfo: "You have come to the party uninvited with Mathers.  She has the intention of teasing the Sir William Saville's team over their lack of significant findings because of their friendly rivalry.",
+  motives: "<p>You are particularly interested in the Oxford group's dig, which you are visiting this evening, because they are excavating in what might be the area of the tomb of an ancient ruler known as the Crimson Pharaoh, dating from the XVIth Dynasty.  This pharaoh was a very powerful one who was, so the stories go, laid low by the use of an artifact called the Jade Scarab.  If this scarab is in the neighborhood, it is just the sort of thing that your bosses are keen for you to obtain.  And who would ever suspect a kindly clergyman of theft?</p><p>You are also eager to obtain an artifact recovered by your own digging group, a particularly fine Agate Mask. Professor Mathers dug it up while working by herself, and she has kept it close to herself since, but you are sure it must be powerful – or at least valuable – so you would like to steal it if you get the chance.  This would be more difficult, so it might be good to try and frame someone else for the crime...</p>",
+  relations: [
+    {name: "Professor Regina Mathers", person: "", desc: "Your archaeology team's boss.  Clearly a very clever woman, who has made many fine discoveries.  She has always been very amiable towards you, maybe because you provide quite a bit of funding for her excavations." },
+    {name: "Lady Jane Fortescue", person: "", desc: "A member of your dig team.  A charming English widowed lady, but completely empty-headed." },
+    {name: "Angela Fox", person: "", desc: "A member of your dig team.  In general things are good in your marriage, but you are concerned that your wife may be keeping secrets from you." },
+    {name: "Chris Kovacs", person: "", desc: "A member of your dig team.  A hard-working young student, from Hungary but none the worse for that." }
+  ],
+  items: [
+    "$40"
+  ],
+  abilities: [
+    abilities.suddenInsight
+  ],
+  goals: [
+    {name: "Learn more about the murder", desc: "Although it probably doesn't matter much to you, you are still curious as to how this could have happened to Abu Nazir."},
+    {name: "Obtain artifacts", desc: "By hook or by crook, you want to obtain any ancient artifacts that could be useful for the German cause – particularly the Jade Scarab and the Agate Mask."},
+    {name: "Maintain your cover", desc: "No-one must know that you are secretly a German agent (except other Germans, if there are any, and you think they can be trusted)"},
+    {name: "Investigate moving to another archaeological group", desc: "If they're better than your current one! And only if your wife agrees."}
+  ],
+  secrets: [
+    "You are a secret agent working for the German government."
+  ],
+  clue: "The Jade Scarab, Agate Mask, and other such artifacts could be useful to national governments."
+};
+
+
+
+let angelaFox = {
+  name: "Angela Fox",
+  gender: "F",
+  desc: "administrative assitant to Professor Mathers' dig team.",
+  seenAs: "brisk, efficient, and slightly haughty",
+  background: "<p>You are the wife of a minister in a quiet Cambridge parish, with plenty of time to indulge your hobby of excavating Egyptian tombs, helping Professor Mathers recover fine ancient artifacts and bring them back to civilization.</p><p>Actually, that's not true.  You are a secret agent working for the British government.  You are on a highly secret mission to gather valuable and powerful Egyptian artifacts for Britain to use if there should be war amongst the European powers.  Even your husband Godfrey has no idea that you are secretly an agent, so perfect is your 'loving wife' act.</p><p>You are not quite happy about your husband. You were ordered to marry someone respectable to provide cover for your real job, and he certainly seemed keen at the time – but he has been very incurious about your background – he has never asked to meet your family, for example.  Maybe this is just the natural reserve of a clergyman, but it still seems odd to you.  Furthermore, he does not really seem at all religious, when he's not actually in the pulpit.  Is he keeping secrets from you?  Maybe another man might be able to shed light on this odd behaviour.</p>",
+  invitationInfo: "You have come to the party uninvited with Mathers.  She has the intention of teasing the Sir William Saville's team over their lack of significant findings because of their friendly rivalry.",
+  motives: "<p>You are particularly interested in the Oxford group's dig, which you are visiting this evening, because they are excavating in what might be the area of the tomb of an ancient ruler known as the Crimson Pharaoh, dating from the XVIth Dynasty.  This pharaoh was a very powerful one who was, so the stories go, laid low by the use of an artifact called the Jade Scarab.  If this scarab is in the neighborhood, it is just the sort of thing that your bosses are keen for you to obtain.  And who would ever suspect a kindly clergyman's wife of theft?</p><p>You are also eager to obtain an artifact recovered by your own digging group, a particularly fine Agate Mask. Professor Mathers dug it up while working by herself, and she has kept it close to herself since, but you are sure it must be powerful – or at least valuable – so you would like to steal it if you get the chance.  This would be more difficult, so it might be good to try and frame someone else for the crime...</p><p>You are rather suspicious of Chris Kovacs, the young student working for the team.  Chris has a very intense manner and is always sneaking around.  Being a very poor Hungarian, it wouldn't surprise you if there was some pilfering going on – you are always careful to keep an eye on your own possessions when Chris is nearby.</p>",
+  relations: [
+    {name: "Professor Regina Mathers", person: "", desc: "Your archaeology team's boss.  Clearly a very clever woman, who has made many fine discoveries.  She has always been very amiable towards you, probably because of your frequent efforts to be helpful." },
+    {name: "Lady Jane Fortescue", person: "", desc: "A member of your dig team.  A charming English widowed lady, but completely empty-headed." },
+    {name: "Reverend Godfrey Fox", person: "", desc: "A member of your dig team.  In general things are good in your marriage, but you are concerned that your husband may be keeping secrets from you." },
+    {name: "Chris Kovacs", person: "", desc: "A member of your dig team and a suspiciously sneaky young student, from Hungary." }
+  ],
+  items: [
+    "$30"
+  ],
+  abilities: [
+    abilities.suddenInsight
+  ],
+  goals: [
+    {name: "Learn more about the murder", desc: "Although it probably doesn't matter much to you, you are still curious as to how this could have happened to Abu Nazir."},
+    {name: "Obtain artifacts", desc: "By hook or by crook, you want to obtain any ancient artifacts that could be useful for the British cause – particularly the Jade Scarab and the Agate Mask."},
+    {name: "Maintain your cover", desc: "No-one must know that you are secretly a British agent (except, in extreme circumstances, other Britons, if you think they can be trusted)"},
+    {name: "Keep an eye on Chris", desc: "Chris is certainly up to something sneaky, and mustn't be allowed to get away with it!"}
+  ],
+  secrets: [
+    "You are a secret agent working for the British government."
+  ],
+  clue: "The Jade Scarab, Agate Mask, and other such artifacts could be useful to national governments."
+};
+
+
 
 
 // player info
@@ -591,12 +775,12 @@ let people = {
   "CAKE": {person: "Abby Clark", character: marieclairGuiscard },
   "LION": {person: "Wesley Clark", character: armandLenoir },
   "DUNKAROO": {person: "Cait Zimmerman", character: alexMcQueen },
-  //"WAND": {person: "Brittany Solomon", character:  },
-  //"JOBIN": {person: "Jordan Rowsey", character:  },
+  "WAND": {person: "Brittany Solomon", character: janeFortescue },
+  "JOBIN": {person: "Jordan Rowsey", character: chrisKovacs },
   //"YELLOW": {person: "Sam Jones", character:  },
-  //"LEOPARD": {person: "Jenny Jones", character:  },
-  //"HAWK": {person: "Shane Huntley", character:  },
-  //"FART": {person: "Stephanie Huntley", character:  },
+  "LEOPARD": {person: "Jenny Jones", character: reginaMathers },
+  "HAWK": {person: "Shane Huntley", character: godfreyFox },
+  "FART": {person: "Stephanie Huntley", character: angelaFox },
   "BANJO": {person: "Dominic Gray", character: tariqAlMansoor },
   "DONKEY": {person: "Gracie Gray", character: fatimaAlMansoor }
 };
