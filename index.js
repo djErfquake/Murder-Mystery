@@ -33,23 +33,44 @@ app.listen(port, () => { console.log(`Listening on port ${port}`); });
 
 
 let abilities = {
-  evaluation: {name: "Evaluation", desc: "You are able to judge the exact price that you could sell an object (jewellery or goods) for.  Show Calvin an item and he will tell you it's worth.  Permanant ability."},
-  interrogation: {name: "Interrogation", desc: "Spend two minutes talking forcefully to another character who must then show you a Secret they haven't shown you before."},
-  suddenInsight: {name: "Sudden Insight", desc: "After talking for two minutes with any person, you realize that they revealed more than they intended.  They must show you everything on their “Clue”."},
-  flattery: {name: "Flattery", desc: "Spend at least two minutes flattering a member of the opposite sex.  Then show this card to your target, who must show you their top goal."},
-  callSnake: {name: "Call Snake", desc: "Spend thirty seconds chanting in a low voice. Your wooden snake-stick will transform into a deadly poisonous snake which you can then command."},
-  summonCrimsonPharaoh: {name: "Summon the Crimson Pharaoh", desc: "Certain magical objects will allow you to call the Crimson Pharaoh into being if you chant for one minute uninterupted.  He will appear from the sky."},
-  thoroughAppraisal: {name: "Thorough Appraisal", desc: "After talking for two minutes with any person, they must show you all their item cards and money."},
-  aMomentOfPassion: {name: "A Moment of Passion", desc: "Spend two minutes alone with a member of the opposite sex.  They must show you a Secret they haven't shown you before."},
-  pickpocket: {name: "Pickpocket", desc: "Give this card to Calvin when you wish to pick someone's pocket in order to steal a single item or money card.  You may specify what you are stealing, but if you do not (or the victim does not have it) Calvin will take something at random."},
-  success: {name: "Success!", desc: "If you’re asked to do a Rock-Paper-Scissors challenge, you can choose to automatically succeed at it."},
-  gainTrust: {name: "Gain Trust", desc: "Spend at least two minutes talking to somebody.  Then show them this card: they must show you a Secret they haven't shown you before."},
-  intimidation: {name: "Intimidation", desc: "Spend at least two minutes talking forcefully to another character.  Then show them this card:  they must show you all of their Goals."},
-  hypnosis: {name: "Hypnosis", desc: "Gaze into another character's eyes, then show them this card:  they must reveal to you all of their Secrets."},
-  gossip: {name: "Gossip", desc: "After talking with any person, show them this card and they must truthfully tell you everything they know about another person of your choice."},
-  oops: {name: "Oops", desc: "Show this card during any Rock-Paper-Scissors challenge and the person you choose will automatically lose."},
-  sensePower: {name: "Sense Power", desc: "See Calvin when holding an artifact to study it for to see if it has magical powers."}
+  evaluation: {name: "Evaluation", names: [], count: 0, permanant: true, desc: "You are able to judge the exact price that you could sell an object (jewelry or goods) for.  Show Calvin an item and he will tell you it's worth.  Permanant ability."},
+  interrogation: {name: "Interrogation", names: [], count: 0, permanant: false, desc: "After talking forcefully to another character, show them this card.  The must show you a <b>Secret</b> they haven't shown you before."},
+  suddenInsight: {name: "Sudden Insight", names: [], count: 0, permanant: false, desc: "After talking with any person for longer than two minutes, you realize that they revealed more than they intended.  Show them this card.  They must show you everything on their “Clue”."},
+  flattery: {name: "Flattery", names: [], count: 0, permanant: false, desc: "After flattering a member of the opposite sex., show them this card.  They must show you their second <b>Goal</b>."},
+  callSnake: {name: "Call Snake", names: [], count: 0, permanant: true, desc: "Spend fifteen seconds chanting in a low voice.  Your wooden snake-stick will transform into a deadly poisonous snake which you can then command."},
+  summonCrimsonPharaoh: {name: "Summon the Crimson Pharaoh", names: [], count: 0, permanant: true, desc: "Certain magical objects will allow you to call the Crimson Pharaoh into being if you chant for twenty seconds uninterupted.  He will appear from the sky."},
+  thoroughAppraisal: {name: "Thorough Appraisal", names: [], count: 0, permanant: false, desc: "After talking with any person, show them this card.  They must show you all of their item cards and money."},
+  aMomentOfPassion: {name: "A Moment of Passion", names: [], count: 0, permanant: false, desc: "After being alone with a member of the opposite sex, show them this card.  They must show you a <b>Secret</b> they haven't shown you before."},
+  pickpocket: {name: "Pickpocket", names: [], count: 0, permanant: false, desc: "Give this card to Calvin when you wish to pick someone's pocket in order to steal a single item or money card.  You may specify what you are stealing, but if you do not (or the victim does not have it) Calvin will take something at random."},
+  success: {name: "Success!", names: [], count: 0, permanant: false, desc: "If you’re asked to do a Rock-Paper-Scissors challenge, you can choose to automatically succeed at it."},
+  gainTrust: {name: "Gain Trust", names: [], count: 0, permanant: false, desc: "After talking with any person for longer than two minutes, show them this card.  They must show you a <b>Secret</b> they haven't shown you before."},
+  intimidation: {name: "Intimidation", names: [], count: 0, permanant: false, desc: "After talking forcefully to another character, show them this card.  They must show you all of their <b>Goals</b>."},
+  hypnosis: {name: "Hypnosis", names: [], count: 0, permanant: false, desc: "Gaze into another character's eyes, then show them this card.  They must reveal to you all of their <b>Secrets</b>."},
+  gossip: {name: "Gossip", names: [], count: 0, permanant: false, desc: "After talking with any person, show them this card.  They must truthfully tell you everything they know about another person of your choice."},
+  oops: {name: "Oops", names: [], count: 0, permanant: false, desc: "Show this card during any Rock-Paper-Scissors challenge and the person you choose will automatically lose."},
+  sensePower: {name: "Sense Power", names: [], count: 0, permanant: true, desc: "See Calvin when holding an artifact to study it for to see if it has magical powers.  If the object is magical, you will not learn what the powers are."},
+  cleansingFireOfHorus: {name: "Cleansing Fire of Horus", names: [], count: 0, permanant: false, desc: "After chanting for fifteen seconds, reveal this card.  You can use the Eye of Horus (if you have it) to produce a burst of flame which will destroy any being of pure evil."},
+  hypnoticCommand: {name: "Hypnotic Command", names: [], count: 0, permanant: false, desc: "Gaze deeply into someone's eyes, then show them this card.  You have enslaved this person to do your will for five minutes.  They will have no recollection of the spell or what they did under hypnosis."}
 };
+
+
+let items = [
+  {name: "Jade Scarab", count: 1, permanant: true, desc: "A beautifully-carved scarab (beetle) made out of jade."}, // fake
+  {name: "Fake Jade Scarab", count: 1, permanant: true, desc: "An amateurishly carved scarab (beetle) made out of jade."},
+  {name: "Sacrifical Dagger", count: 1, permanant: true, desc: "Made of bronze, it is of a type common in Egyptian tombs."},
+  {name: "Abu Nazir's Crimson Sash", count: 1, permanant: true, desc: "Made of silk and rather fine for a mere digger, it is rather more crimson now since his stabbing."},
+  {name: "Truth Powder of Imhotep", count: 1,permanant: false,  desc: "Offer your target some food or drink.  If they accept, they eat/drink the powder; show them this card. They must answer your next four questions truthfully."},
+  {name: "Poison Antidote", count: 4, permanant: false, desc: "Neutralize any poison.  This must be administered in Calvin's presence."},
+  {name: "Poisonous Scorpion", count: 2, permanant: true, desc: "Place this scorpion in someone's pocket then tell Calvin.  The scorpion will attempt to sting your victim by playing Calvin in Rock-Paper-Scissor.  If they lose, the scorpion stings your victim and they may not use ability cards while poisoned.  If they win, they can attempt to kill the scorpion."},
+  {name: "Poison Pills", count: 1, permanant: false, desc: "Offer your target some food or drink.  If they accept, they eat/drink the poison; show them this card.  They may not use ability cards while poisoned."},
+  {name: "Snake Stick", count: 1, permanant: true, desc: "A small wooden stick, delicately carved into the likeness of a snake."},
+  {name: "Cat Statuette", count: 1, permanant: true, desc: "A rather lovely (if you like cats) basalt carving about as big as a hand."},
+  {name: "The Eye of Horus", count: 1, permanant: true, desc: "A small malachite plaque inscribed with an eye symbol."},
+  {name: "Agate Mask", count: 1, permanant: true, desc: "A beautiful yet eerie mask, carved out of agate."},
+  {name: "Black Staff", count: 1, permanant: true, desc: "A finely-carved black stone staff about two feet long."},
+  {name: "Black Staff", count: 1, permanant: false, desc: "A finely-carved black stone staff about two feet long.  In the hands of an adept, its touch will automatically poison the chosen target, with no need for a Rock-Paper-Scissors trial.  Poisoned characters may not use ability cards while poisoned.  This must be done in Calvin's presence."}
+]
+
 
 
 
@@ -777,7 +798,7 @@ let blakeRoberts = {
   ],
   abilities: [
     abilities.suddenInsight,
-    abilities.Gossip,
+    abilities.gossip,
     abilities.gainTrust
   ],
   goals: [
@@ -792,6 +813,14 @@ let blakeRoberts = {
   clue: "You have no clues."
 };
 
+
+let queenBity = {
+  name: "Queen Bity",
+  abilities: [
+    abilities.cleansingFireOfHorus,
+    abilities.hypnoticCommand
+  ]
+};
 
 
 
@@ -821,6 +850,7 @@ let people = {
 
 
 
+let abilityList = [];
 
 // add player names to relationships
 Object.keys(people).forEach(function(character) {
@@ -834,7 +864,19 @@ Object.keys(people).forEach(function(character) {
       }
     });
   }
+
+  let characterAbilities = people[character].character.abilities;
+  for (let i = 0; i < characterAbilities.length; i++) { characterAbilities[i].count++;  characterAbilities[i].names.push(people[character].character.name);}
+
 });
+
+Object.keys(abilities).forEach(function(key) {
+  abilityList.push(abilities[key]);
+});
+
+// console.log("abilities:", abilities);
+// console.log("abilities:", JSON.stringify(abilityList));
+// console.log("items:", JSON.stringify(items));
 
 
 
