@@ -67,6 +67,7 @@ let items = [
   {name: "Cat Statuette", count: 1, permanant: true, desc: "A rather lovely (if you like cats) basalt carving about as big as a hand."},
   {name: "The Eye of Horus", count: 1, permanant: true, desc: "A small malachite plaque inscribed with an eye symbol."},
   {name: "Agate Mask", count: 1, permanant: true, desc: "A beautiful yet eerie mask, carved out of agate."},
+  {name: "Blue Pen", count: 1, permanant: true, desc: "A fine blue fountain pen."},
   {name: "Black Staff", count: 1, permanant: true, desc: "A finely-carved black stone staff about two feet long."},
   {name: "Black Staff", count: 1, permanant: false, desc: "A finely-carved black stone staff about two feet long.  In the hands of an adept, its touch will automatically poison the chosen target, with no need for a Rock-Paper-Scissors trial.  Poisoned characters may not use ability cards while poisoned.  This must be done in Calvin's presence."}
 ]
